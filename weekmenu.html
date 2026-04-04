@@ -16,14 +16,14 @@
     header p { font-family: Arial, sans-serif; font-size: 0.85rem; color: #666; }
     .meal { background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 2rem; margin-bottom: 2rem; }
     .meal-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 2px solid #f0f0ee; }
-    .meal-header h2 { font-size: 1.3rem; }
-    .meal-meta { font-family: Arial, sans-serif; font-size: 0.78rem; color: #888; }
-    .badge { display: inline-block; background: #e8f5d8; color: #3a6a10; font-family: Arial, sans-serif; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 3px; margin-left: 0.5rem; }
+    .meal-header h2 { font-size: 1.25rem; }
+    .meal-meta { font-family: Arial, sans-serif; font-size: 0.78rem; color: #888; text-align: right; }
+    .badge { display: inline-block; background: #e8f5d8; color: #3a6a10; font-family: Arial, sans-serif; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 3px; margin-top: 0.3rem; }
     h3 { font-family: Arial, sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #888; margin: 1.25rem 0 0.6rem; }
     ul.ingredients { padding-left: 1.25rem; font-size: 0.93rem; }
     ul.ingredients li { margin-bottom: 0.3rem; }
     ol.steps { padding-left: 1.25rem; font-size: 0.93rem; }
-    ol.steps li { margin-bottom: 0.6rem; }
+    ol.steps li { margin-bottom: 0.65rem; }
     .tip { background: #f0f4e8; border-left: 3px solid #7aab3a; padding: 0.6rem 0.9rem; font-family: Arial, sans-serif; font-size: 0.83rem; color: #3a5a10; margin-top: 1rem; border-radius: 0 4px 4px 0; }
     footer { text-align: center; font-family: Arial, sans-serif; font-size: 0.75rem; color: #aaa; padding-top: 2rem; margin-top: 2rem; border-top: 1px solid #eee; }
   </style>
@@ -37,120 +37,106 @@
       <p>3 kooksessies · 2 porties per maaltijd · low-carb · vers &amp; seizoensgebonden</p>
     </header>
 
-    <!-- Maandag -->
+    <!-- Maandag: Chinese Roerbak -->
     <div class="meal">
       <div class="meal-header">
         <div>
-          <h2>🐟 Maandag 6 april</h2>
-          <div style="font-size:1.05rem; font-weight:700; margin-top:0.2rem;">Tonijnsteak met sesam-gember-roerbakgroenten</div>
+          <h2>🥢 Maandag 6 april</h2>
+          <div style="font-size:1.05rem; font-weight:700; margin-top:0.2rem;">Chinese Rundvlees Roerbak met Paksoi en Bloemkoolrijst</div>
+          <div style="font-family:Arial,sans-serif;font-size:0.82rem;color:#888;margin-top:0.3rem;font-style:italic;">Restjes voor dinsdag 7 april</div>
         </div>
-        <div class="meal-meta">
-          ⏱ 25 min · Aziatisch · Makkelijk
-          <span class="badge">✅ verwarmbaar</span>
-        </div>
+        <div class="meal-meta">⏱ 25 min · Chinees · Makkelijk<br><span class="badge">✅ verwarmbaar</span></div>
       </div>
-      <p style="font-size:0.88rem; color:#666; font-style:italic;">Restjes voor dinsdag 7 april</p>
-
       <h3>Ingrediënten (2 porties)</h3>
       <ul class="ingredients">
-        <li>2 verse tonijnsteaks (à ±150g)</li>
+        <li>350g biefstuk of flank steak, in dunne reepjes</li>
         <li>2 paksoiplanten of 300g babypaksoi</li>
         <li>200g champignons, in plakjes</li>
-        <li>1 rode paprika, in reepjes</li>
-        <li>3 teentjes knoflook, fijngehakt</li>
-        <li>1 stuk verse gember (2 cm), geraspt</li>
-        <li>3 el sojasaus · 1 el sesamolie · 1 el sesamzaad · 1 tl honing</li>
-        <li>2 lente-uitjes, in ringen</li>
+        <li>3 teentjes knoflook · 1 stuk verse gember (3 cm), geraspt</li>
+        <li>3 lente-uitjes, in ringen</li>
+        <li>3 el sojasaus · 2 el oestersaus · 1 el sesamolie · 1 el hoisin-saus (optioneel)</li>
+        <li>1 tl maïszetmeel opgelost in 2 el water</li>
+        <li>Chilivlokken of rode peper naar smaak</li>
         <li>Zonnebloemolie · zout · peper</li>
+        <li><em>Bloemkoolrijst:</em> 1 kleine bloemkool · zout · peper · sesamolie</li>
       </ul>
-
       <h3>Bereiding</h3>
       <ol class="steps">
-        <li>Snijd de paksoi grof, paprika in reepjes en champignons in plakjes. Rasp de gember, hak de knoflook fijn.</li>
-        <li>Roer een marinade van sojasaus, sesamolie, gember, knoflook en honing.</li>
-        <li>Verhit een wok op hoog vuur. Bak champignons 3 min, voeg paprika toe, 2 min verder.</li>
-        <li>Voeg paksoi toe, roerbak 2 min. Giet de marinade erbij en schep alles om.</li>
-        <li>Bak tonijnsteaks apart in hete pan: 2–3 min per kant (lichtroze van binnen).</li>
-        <li>Serveer tonijn op de roerbakgroenten. Bestrooi met sesamzaad en lente-ui.</li>
+        <li>Rasp de bloemkool grof of pulseer in keukenmachine tot rijstkorrelgrootte. Bak 4–5 min in droge hete pan, breng op smaak met zout, peper en een druppel sesamolie. Warm houden.</li>
+        <li>Meng sojasaus, oestersaus, sesamolie en hoisin in een kom. Houd apart.</li>
+        <li>Verhit wok op hoogste vuur. Bak biefstreepjes in scheut olie 2–3 min (niet te gaar). Haal apart.</li>
+        <li>Bak champignons in dezelfde pan 3 min tot goudbruin. Voeg knoflook, gember en chili toe, 1 min.</li>
+        <li>Voeg paksoi toe, roerbak 2 min. Giet saus erbij en roer maïszetmeelmengsel erdoor — saus bindt licht.</li>
+        <li>Vlees terug in pan, 30 seconden omscheppen. Serveer op bloemkoolrijst met lente-ui.</li>
       </ol>
-      <div class="tip">🎯 Opwarmen: 2–3 min op medium vermogen in magnetron, dek de tonijn af om uitdrogen te voorkomen.</div>
+      <div class="tip">🎯 Snijd het vlees de avond ervoor al in reepjes — scheelt 10 min kookstress. Opwarmen: 2–3 min op medium, dek af met nat keukenpapier.</div>
     </div>
 
-    <!-- Woensdag -->
+    <!-- Woensdag: Thaise Curry -->
     <div class="meal">
       <div class="meal-header">
         <div>
-          <h2>🌿 Woensdag 8 april</h2>
-          <div style="font-size:1.05rem; font-weight:700; margin-top:0.2rem;">Kipfilet met groene asperges en citroen-knoflookboter uit de oven</div>
+          <h2>🌶️ Woensdag 8 april</h2>
+          <div style="font-size:1.05rem; font-weight:700; margin-top:0.2rem;">Thaise Groene Curry met Kipfilet en Courgette</div>
+          <div style="font-family:Arial,sans-serif;font-size:0.82rem;color:#888;margin-top:0.3rem;font-style:italic;">Restjes voor donderdag 9 april</div>
         </div>
-        <div class="meal-meta">
-          ⏱ 30 min · Mediterraan · Makkelijk
-          <span class="badge">✅ verwarmbaar</span>
-        </div>
+        <div class="meal-meta">⏱ 30 min · Thais · Makkelijk<br><span class="badge">✅ verwarmbaar</span></div>
       </div>
-      <p style="font-size:0.88rem; color:#666; font-style:italic;">Restjes voor donderdag 9 april · Groene asperges zijn nu in seizoen 🇳🇱</p>
-
       <h3>Ingrediënten (2 porties)</h3>
       <ul class="ingredients">
-        <li>2 kipfilets (à ±200g)</li>
-        <li>500g groene asperges</li>
-        <li>3 teentjes knoflook, geperst</li>
-        <li>40g roomboter</li>
-        <li>1 citroen (rasp + sap)</li>
-        <li>1 tl gedroogde tijm · 1 tl gedroogde rozemarijn</li>
-        <li>Olijfolie · zout · peper</li>
+        <li>400g kipfilet, in hapklare stukken</li>
+        <li>1 courgette, in halve maantjes</li>
+        <li>1 rode paprika, in reepjes</li>
+        <li>1 blik kokosmelk (400ml)</li>
+        <li>2 el groene currypasta (bijv. Mae Ploy)</li>
+        <li>2 teentjes knoflook · 1 stuk gember (2 cm)</li>
+        <li>2 el vissaus · 1 tl bruine suiker · sap van ½ limoen</li>
+        <li>Handvol verse basilicum of koriander</li>
+        <li>Zonnebloemolie</li>
+        <li><em>Bloemkoolrijst:</em> 400g (vers of diepvries)</li>
       </ul>
-
       <h3>Bereiding</h3>
       <ol class="steps">
-        <li>Verwarm oven voor op 200°C. Bekleed bakplaat met bakpapier.</li>
-        <li>Breek houtige onderkanten van asperges af. Leg asperges en kipfilets op de bakplaat.</li>
-        <li>Smelt boter in klein pannetje. Roer er knoflook, citroenrasp, citroensap, tijm en rozemarijn door.</li>
-        <li>Bestrijk kip en asperges royaal met kruidenboter. Breng op smaak, druppel olijfolie over asperges.</li>
-        <li>Rooster 22–25 min in oven (kerntemperatuur kip 75°C).</li>
-        <li>Serveer direct met extra citroen.</li>
+        <li>Bereid bloemkoolrijst: bak 4–5 min in droge hete pan, breng op smaak. Warm houden.</li>
+        <li>Bak kipstukken in olie op hoog vuur 4–5 min tot lichtbruin. Haal uit pan.</li>
+        <li>Fruit knoflook en gember 1 min. Voeg currypasta toe en bak 2 min — geuren komen vrij.</li>
+        <li>Giet kokosmelk erbij, roer goed. Voeg vissaus en suiker toe, breng aan de kook.</li>
+        <li>Kip terug in pan. Voeg courgette en paprika toe. Laat 8–10 min sudderen op middelhoog vuur.</li>
+        <li>Breng op smaak met limoensap. Serveer op bloemkoolrijst met verse kruiden.</li>
       </ol>
-      <div class="tip">🎯 Voeg bij opwarmen een eetlepel water toe voor stoom — asperges blijven zo frisser.</div>
+      <div class="tip">🎯 Begin met 1,5 el currypasta en proef — Mae Ploy is pittig. Curry wordt de volgende dag nog lekkerder. Voeg scheutje water toe bij opwarmen.</div>
     </div>
 
-    <!-- Vrijdag -->
+    <!-- Vrijdag: Bloemkool Linzen -->
     <div class="meal">
       <div class="meal-header">
         <div>
-          <h2>🌱 Vrijdag 10 april <span style="font-size:0.8rem; color:#7aab3a; font-weight:400;">(vegetarisch)</span></h2>
-          <div style="font-size:1.05rem; font-weight:700; margin-top:0.2rem;">Rode linzen-bloemkool dal met geroosterde wortels</div>
+          <h2>🌱 Vrijdag 10 april <span style="font-size:0.8rem;color:#7aab3a;font-weight:400;">(vegetarisch)</span></h2>
+          <div style="font-size:1.05rem; font-weight:700; margin-top:0.2rem;">Geroosterde Bloemkool met Rode Linzen, Tahini en Harissa</div>
+          <div style="font-family:Arial,sans-serif;font-size:0.82rem;color:#888;margin-top:0.3rem;font-style:italic;">Restjes voor zaterdag 11 april</div>
         </div>
-        <div class="meal-meta">
-          ⏱ 45 min · Indiaas · Makkelijk
-          <span class="badge">✅ verwarmbaar</span>
-        </div>
+        <div class="meal-meta">⏱ 45 min · Midden-Oosters · Makkelijk<br><span class="badge">✅ verwarmbaar</span></div>
       </div>
-      <p style="font-size:0.88rem; color:#666; font-style:italic;">Restjes voor zaterdag 11 april · Dal wordt de volgende dag nog lekkerder</p>
-
       <h3>Ingrediënten (2 porties)</h3>
       <ul class="ingredients">
-        <li>200g rode linzen</li>
-        <li>1 kleine bloemkool, in roosjes</li>
-        <li>4 wortels, in stukken</li>
-        <li>1 grote ui, gesnipperd · 3 teentjes knoflook</li>
-        <li>1 blik kokosmelk (400ml) · 1 blik gepelde tomaten (400g)</li>
-        <li>600ml groentebouillon</li>
-        <li>2 tl kurkuma · 2 tl komijn · 1 tl koriander · 1 tl garam masala · ½ tl chilivlokken</li>
+        <li>1 grote bloemkool, in dikke plakken of grote roosjes</li>
+        <li>150g rode linzen (droog gewicht)</li>
+        <li>1 blik gepelde tomaten (400g) · 500ml groentebouillon</li>
+        <li>1 grote ui · 3 teentjes knoflook</li>
+        <li>2 el harissa · 2 el tahini · sap van ½ citroen</li>
+        <li>1 tl komijn · 1 tl kurkuma · 1 tl gerookt paprikapoeder</li>
         <li>Olijfolie · zout · peper</li>
-        <li>Verse koriander of peterselie · naturel yoghurt (optioneel)</li>
+        <li>Verse peterselie of koriander</li>
       </ul>
-
       <h3>Bereiding</h3>
       <ol class="steps">
-        <li>Verwarm oven op 200°C. Leg wortelstukken en bloemkoolroosjes op bakplaat met olijfolie, zout en peper. Rooster 25–30 min.</li>
-        <li>Fruit ui 5 min in pan met olijfolie. Voeg knoflook en chili toe, 2 min.</li>
-        <li>Voeg specerijen toe (kurkuma, komijn, koriander, garam masala). Roer 1 min op laag vuur.</li>
-        <li>Voeg linzen, tomaten, kokosmelk en bouillon toe. Breng aan de kook, zet vuur laag.</li>
-        <li>Laat 20 min zachtjes sudderen tot linzen romig zijn. Roer regelmatig.</li>
-        <li>Schep geroosterde groenten door de dal. Breng op smaak.</li>
-        <li>Serveer met verse koriander en een lepel yoghurt.</li>
+        <li>Verwarm oven op 220°C. Bestrijk bloemkoolplakken met olijfolie, harissa, gerookt paprikapoeder, zout en peper. Rooster 25–30 min tot donkere randen.</li>
+        <li>Fruit ui 5 min in olie. Voeg knoflook, komijn en kurkuma toe, 1 min.</li>
+        <li>Voeg linzen, tomaten en bouillon toe. Kook 18–20 min tot linzen romig zijn.</li>
+        <li>Maak tahini-dressing: meng tahini met citroensap en 2–3 el water tot vloeibare saus.</li>
+        <li>Schep linzen op bord, leg geroosterde bloemkool erop, druppel tahini erover. Garneer met peterselie.</li>
       </ol>
-      <div class="tip">🎯 Dal reheats uitstekend — voeg een scheutje water toe bij opwarmen. Smaken trekken verder in tijdens bewaren.</div>
+      <div class="tip">🎯 Bewaar bloemkool en linzen apart — bloemkool houdt textuur beter. Smaken worden de volgende dag intenser.</div>
     </div>
 
     <footer>Gegenereerd door Claude · week van 6 april 2026</footer>
