@@ -14,17 +14,19 @@
     header .label { font-family: Arial, sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #888; margin-bottom: 0.5rem; }
     header h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700; line-height: 1.2; margin-bottom: 0.75rem; }
     header p { font-family: Arial, sans-serif; font-size: 0.85rem; color: #666; }
-    .section { margin-bottom: 2rem; }
-    .section h2 { font-family: Arial, sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #888; padding-bottom: 0.4rem; border-bottom: 1px solid #ddd; margin-bottom: 0.75rem; }
-    .section ul { list-style: none; padding: 0; }
-    .section ul li { font-size: 0.95rem; padding: 0.45rem 0.6rem; border-bottom: 1px solid #f0f0ee; display: flex; align-items: center; gap: 0.6rem; cursor: pointer; border-radius: 4px; transition: background 0.1s; }
-    .section ul li:hover { background: #f0f0ee; }
-    .section ul li::before { content: "☐"; font-size: 1.1rem; color: #ccc; flex-shrink: 0; }
-    .section ul li.done { text-decoration: line-through; color: #bbb; }
-    .section ul li.done::before { content: "☑"; color: #7aab3a; }
-    .pantry { color: #aaa; font-style: italic; font-size: 0.88rem; }
+    .section { background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 1.75rem 2rem; margin-bottom: 1.5rem; }
+    .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 2px solid #f0f0ee; }
+    .section-header .icon { font-size: 1.4rem; }
+    .section-header h2 { font-family: Arial, sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #888; }
+    ul.items { list-style: none; padding: 0; }
+    ul.items li { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.45rem 0; border-bottom: 1px solid #f5f5f3; font-size: 0.93rem; }
+    ul.items li:last-child { border-bottom: none; }
+    ul.items li::before { content: "○"; color: #ccc; font-size: 0.8rem; margin-top: 0.2rem; flex-shrink: 0; }
+    ul.items li em { color: #999; font-size: 0.83rem; }
+    .pantry { background: #f8f8f6; }
+    .pantry ul.items li::before { color: #b8d0a0; }
+    .note { background: #f0f4e8; border-left: 3px solid #7aab3a; padding: 0.6rem 0.9rem; font-family: Arial, sans-serif; font-size: 0.83rem; color: #3a5a10; margin-bottom: 2rem; border-radius: 0 4px 4px 0; }
     footer { text-align: center; font-family: Arial, sans-serif; font-size: 0.75rem; color: #aaa; padding-top: 2rem; margin-top: 2rem; border-top: 1px solid #eee; }
-    .note { font-family: Arial, sans-serif; font-size: 0.82rem; background: #f0f4e8; border-left: 3px solid #7aab3a; padding: 0.6rem 0.9rem; color: #3a5a10; margin-bottom: 2rem; border-radius: 0 4px 4px 0; }
   </style>
 </head>
 <body>
@@ -33,73 +35,106 @@
     <header>
       <div class="label">Boodschappenlijst · Ward</div>
       <h1>Week van 6 april 2026</h1>
-      <p>3 maaltijden · 2 porties per kooksessie · klik een item aan om het af te strepen</p>
+      <p>3 maaltijden · low-carb · vers &amp; seizoensgebonden · 2 porties per kooksessie</p>
     </header>
 
-    <div class="note">🛒 Tip: klik op een item om het af te vinken terwijl je boodschappen doet. De lijst onthoudt je vinkjes niet na afsluiten — gebruik de Asana-lijst op je telefoon als je onderweg wil aftikken.</div>
+    <div class="note">🛒 Alle hoeveelheden zijn voor 2 porties per maaltijd (3 kooksessies). Items gemarkeerd met <em>mogelijk al in huis</em> kun je overslaan als je ze al hebt.</div>
 
+    <!-- Vlees -->
     <div class="section">
-      <h2>🐟 Vlees, vis &amp; vleeswaren</h2>
-      <ul>
-        <li onclick="this.classList.toggle('done')">2 verse tonijnsteaks (à ±150g, totaal ±300g) — vroeg in week gebruiken</li>
-        <li onclick="this.classList.toggle('done')">2 kipfilets (à ±200g, totaal ±400g)</li>
+      <div class="section-header">
+        <span class="icon">🥩</span>
+        <h2>Vlees, vis &amp; vleeswaren</h2>
+      </div>
+      <ul class="items">
+        <li>350g biefstuk of flank steak <em>— vroeg in week gebruiken (maandag)</em></li>
+        <li>400g kipfilet <em>— Woensdag Thaise curry</em></li>
       </ul>
     </div>
 
+    <!-- Groente & fruit -->
     <div class="section">
-      <h2>🥦 Groente &amp; fruit</h2>
-      <ul>
-        <li onclick="this.classList.toggle('done')">2 paksoiplanten of 300g babypaksoi</li>
-        <li onclick="this.classList.toggle('done')">200g champignons</li>
-        <li onclick="this.classList.toggle('done')">1 rode paprika</li>
-        <li onclick="this.classList.toggle('done')">2 lente-uitjes</li>
-        <li onclick="this.classList.toggle('done')">500g groene asperges 🌱 seizoen NL april</li>
-        <li onclick="this.classList.toggle('done')">1 citroen</li>
-        <li onclick="this.classList.toggle('done')">1 kleine bloemkool</li>
-        <li onclick="this.classList.toggle('done')">4 wortels</li>
-        <li onclick="this.classList.toggle('done')">1 grote ui</li>
-        <li onclick="this.classList.toggle('done')">1 rode chilipeper of chilivlokken</li>
-        <li onclick="this.classList.toggle('done')">1 bol knoflook</li>
-        <li onclick="this.classList.toggle('done')">1 stuk verse gember (±5 cm)</li>
-        <li onclick="this.classList.toggle('done')">Verse koriander of peterselie (garnering)</li>
+      <div class="section-header">
+        <span class="icon">🥦</span>
+        <h2>Groente &amp; fruit</h2>
+      </div>
+      <ul class="items">
+        <li>2 paksoiplanten of 300g babypaksoi <em>— maandag roerbak</em></li>
+        <li>200g champignons <em>— maandag roerbak</em></li>
+        <li>3 lente-uitjes <em>— maandag roerbak</em></li>
+        <li>1 courgette <em>— woensdag curry</em></li>
+        <li>1 rode paprika <em>— woensdag curry</em></li>
+        <li>2 grote bloemkolen <em>— 1 voor bloemkoolrijst maandag · 1 voor roosteren vrijdag</em></li>
+        <li>1 grote ui <em>— vrijdag linzen</em></li>
+        <li>½ limoen <em>— woensdag curry</em></li>
+        <li>½ citroen <em>— vrijdag tahini-dressing</em></li>
+        <li>1 bol knoflook <em>— alle 3 maaltijden</em></li>
+        <li>1 stuk verse gember (±6 cm) <em>— maandag en woensdag</em></li>
+        <li>Handvol verse basilicum of koriander <em>— woensdag Thaise curry</em></li>
+        <li>Handvol platte peterselie of koriander <em>— vrijdag garnering</em></li>
       </ul>
     </div>
 
+    <!-- Houdbaar -->
     <div class="section">
-      <h2>🧀 Zuivel &amp; eieren</h2>
-      <ul>
-        <li onclick="this.classList.toggle('done')">40g roomboter</li>
-        <li onclick="this.classList.toggle('done')">Naturel yoghurt (optioneel, bij de dal)</li>
+      <div class="section-header">
+        <span class="icon">🥫</span>
+        <h2>Houdbaar (blik, sauzen, bouillon)</h2>
+      </div>
+      <ul class="items">
+        <li>1 blik kokosmelk (400ml) <em>— woensdag curry</em></li>
+        <li>1 blik gepelde tomaten (400g) <em>— vrijdag linzen</em></li>
+        <li>150g rode linzen <em>— vrijdag</em></li>
+        <li>Groentebouillon (blokjes of poeder voor ±500ml) <em>— vrijdag linzen</em></li>
+        <li>Oestersaus (2 el) <em>— maandag roerbak</em></li>
+        <li>Groene currypasta Mae Ploy (2 el) <em>— woensdag curry</em></li>
+        <li>Vissaus (2 el) <em>— woensdag curry</em></li>
+        <li>Harissa (2 el — pot of tube) <em>— vrijdag bloemkool</em></li>
+        <li>Tahini (2 el) <em>— vrijdag dressing</em></li>
+        <li>Hoisin-saus (1 el, optioneel) <em>— maandag roerbak</em></li>
+        <li>Sojasaus (3 el) <em>mogelijk al in huis — maandag roerbak</em></li>
+        <li>Maïszetmeel (1 tl) <em>mogelijk al in huis — maandag roerbak</em></li>
+        <li>Bruine suiker of kokossuiker (1 tl) <em>mogelijk al in huis — woensdag curry</em></li>
       </ul>
     </div>
 
-    <div class="section">
-      <h2>🥫 Houdbaar (blik, sauzen, bouillon)</h2>
-      <ul>
-        <li onclick="this.classList.toggle('done')">1 blik kokosmelk (400ml)</li>
-        <li onclick="this.classList.toggle('done')">1 blik gepelde tomaten (400g)</li>
-        <li onclick="this.classList.toggle('done')">200g rode linzen</li>
-        <li onclick="this.classList.toggle('done')">Groentebouillon (blokjes of poeder voor ±600ml)</li>
-        <li onclick="this.classList.toggle('done')"><span class="pantry">Sojasaus (3 el) — mogelijk al in huis</span></li>
-        <li onclick="this.classList.toggle('done')"><span class="pantry">Honing (1 tl) — mogelijk al in huis</span></li>
+    <!-- Kruiden & specerijen -->
+    <div class="section pantry">
+      <div class="section-header">
+        <span class="icon">🫙</span>
+        <h2>Kruiden, specerijen &amp; olie</h2>
+      </div>
+      <ul class="items">
+        <li>Sesamolie <em>— maandag roerbak en bloemkoolrijst</em></li>
+        <li>Gerookt paprikapoeder (1 tl) <em>— vrijdag bloemkool</em></li>
+        <li>Chilivlokken of 1 verse rode peper <em>mogelijk al in huis — maandag roerbak</em></li>
+        <li>Komijn gemalen (1 tl) <em>mogelijk al in huis — vrijdag linzen</em></li>
+        <li>Kurkuma (1 tl) <em>mogelijk al in huis — vrijdag linzen</em></li>
+        <li>Zonnebloemolie <em>mogelijk al in huis — maandag roerbak</em></li>
+        <li>Olijfolie <em>mogelijk al in huis — woensdag en vrijdag</em></li>
+        <li>Zout, peper <em>mogelijk al in huis — alle maaltijden</em></li>
       </ul>
     </div>
 
+    <!-- Diepvries -->
     <div class="section">
-      <h2>🧂 Kruiden, specerijen &amp; olie</h2>
-      <ul>
-        <li onclick="this.classList.toggle('done')">Sesamzaad (1 el)</li>
-        <li onclick="this.classList.toggle('done')">Garam masala</li>
-        <li onclick="this.classList.toggle('done')"><span class="pantry">Sesamolie — mogelijk al in huis</span></li>
-        <li onclick="this.classList.toggle('done')"><span class="pantry">Gedroogde tijm — mogelijk al in huis</span></li>
-        <li onclick="this.classList.toggle('done')"><span class="pantry">Gedroogde rozemarijn — mogelijk al in huis</span></li>
-        <li onclick="this.classList.toggle('done')"><span class="pantry">Kurkuma — mogelijk al in huis</span></li>
-        <li onclick="this.classList.toggle('done')"><span class="pantry">Komijn gemalen — mogelijk al in huis</span></li>
-        <li onclick="this.classList.toggle('done')"><span class="pantry">Koriander gemalen — mogelijk al in huis</span></li>
-        <li onclick="this.classList.toggle('done')"><span class="pantry">Chilivlokken — mogelijk al in huis</span></li>
-        <li onclick="this.classList.toggle('done')"><span class="pantry">Olijfolie — mogelijk al in huis</span></li>
-        <li onclick="this.classList.toggle('done')"><span class="pantry">Zonnebloemolie — mogelijk al in huis</span></li>
-        <li onclick="this.classList.toggle('done')"><span class="pantry">Zout, peper — mogelijk al in huis</span></li>
+      <div class="section-header">
+        <span class="icon">❄️</span>
+        <h2>Diepvries (alternatief)</h2>
+      </div>
+      <ul class="items">
+        <li>400g bloemkoolrijst (diepvries) <em>optioneel alternatief voor verse bloemkool maandag/woensdag</em></li>
+      </ul>
+    </div>
+
+    <!-- Overig -->
+    <div class="section pantry">
+      <div class="section-header">
+        <span class="icon">🧻</span>
+        <h2>Overig</h2>
+      </div>
+      <ul class="items">
+        <li>Bakpapier <em>mogelijk al in huis — vrijdag bloemkool in de oven</em></li>
       </ul>
     </div>
 
