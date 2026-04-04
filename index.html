@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekmenu — 6 april 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #f5f0e8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .container {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+  }
+  .emoji { font-size: 4rem; margin-bottom: 1rem; display: block; }
+  h1 {
+    font-size: 2.2rem;
+    color: #2d4a22;
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+  }
+  .subtitle {
+    color: #7a8c6e;
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .meals-preview {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    text-align: left;
+  }
+  .meals-preview h3 {
+    color: #2d4a22;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+  }
+  .meal-row {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #f0ede6;
+  }
+  .meal-row:last-child { border-bottom: none; }
+  .day-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #7a8c6e;
+    width: 90px;
+    flex-shrink: 0;
+  }
+  .meal-name { color: #2d4a22; font-size: 0.95rem; }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-decoration: none;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    display: block;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  }
+  .card .card-icon { font-size: 2.5rem; margin-bottom: 0.8rem; display: block; }
+  .card h2 { color: #2d4a22; font-size: 1.1rem; margin-bottom: 0.4rem; }
+  .card p { color: #7a8c6e; font-size: 0.85rem; line-height: 1.4; }
+  .card-menu { border-top: 4px solid #4a7c3f; }
+  .card-boodschappen { border-top: 4px solid #e8a020; }
+  footer {
+    margin-top: 2rem;
+    color: #aaa;
+    font-size: 0.8rem;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <span class="emoji">🍽️</span>
+  <h1>Week van 6 april 2026</h1>
+  <p class="subtitle">Ward's persoonlijk weekmenu · Low-carb · Vers & seizoensgebonden</p>
+
+  <div class="meals-preview">
+    <h3>Menu deze week</h3>
+    <div class="meal-row">
+      <span class="day-badge">Ma / Di</span>
+      <span class="meal-name">🐟 Kabeljauw met mosterd-kruidenkorst en geroosterde courgette</span>
+    </div>
+    <div class="meal-row">
+      <span class="day-badge">Wo / Do</span>
+      <span class="meal-name">🍗 Aziatische kipwok met bloemkoolrijst</span>
+    </div>
+    <div class="meal-row">
+      <span class="day-badge">Vr / Za</span>
+      <span class="meal-name">🌱 Geroosterde broccoli & zoete aardappel met kikkererwten en tahini-citroensaus</span>
+    </div>
+  </div>
+
+  <div class="cards">
+    <a href="weekmenu.html" class="card card-menu">
+      <span class="card-icon">📖</span>
+      <h2>Weekmenu</h2>
+      <p>Recepten &amp; stap-voor-stap bereidingsinstructies</p>
+    </a>
+    <a href="boodschappenlijst.html" class="card card-boodschappen">
+      <span class="card-icon">🛒</span>
+      <h2>Boodschappenlijst</h2>
+      <p>Alle ingrediënten per categorie</p>
+    </a>
+  </div>
+
+  <footer>Gegenereerd op 4 april 2026</footer>
+</div>
+</body>
+</html>
