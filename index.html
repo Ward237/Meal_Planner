@@ -11,6 +11,9 @@
     .hero .label { font-family: Arial, sans-serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: #aaa; margin-bottom: 0.75rem; }
     .hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 0.75rem; }
     .hero p { font-family: Arial, sans-serif; font-size: 0.9rem; color: #bbb; }
+    .meals { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; max-width: 900px; margin: 2.5rem auto 0; padding: 0 1.5rem; }
+    .meal-pill { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; padding: 0.75rem 1rem; font-family: Arial, sans-serif; font-size: 0.82rem; color: #ccc; }
+    .meal-pill strong { display: block; color: #fff; margin-bottom: 0.2rem; }
     .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 3rem auto; padding: 0 1.5rem; }
     .card { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 2rem; text-decoration: none; color: inherit; transition: box-shadow 0.2s, transform 0.2s; display: block; }
     .card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.12); transform: translateY(-3px); }
@@ -18,7 +21,7 @@
     .card h2 { font-size: 1.3rem; margin-bottom: 0.5rem; }
     .card p { font-family: Arial, sans-serif; font-size: 0.85rem; color: #666; }
     .card .arrow { font-family: Arial, sans-serif; font-size: 0.8rem; color: #1a1a1a; font-weight: 700; margin-top: 1.25rem; display: inline-block; }
-    footer { text-align: center; font-family: Arial, sans-serif; font-size: 0.75rem; color: #aaa; padding: 2rem; margin-top: 2rem; border-top: 1px solid #eee; }
+    footer { text-align: center; font-family: Arial, sans-serif; font-size: 0.75rem; color: #aaa; padding: 2rem; margin-top: 1rem; border-top: 1px solid #eee; }
   </style>
 </head>
 <body>
@@ -26,18 +29,23 @@
     <div class="label">Maaltijdplanner · Ward</div>
     <h1>Week van 6 april 2026</h1>
     <p>3 maaltijden · low-carb · vers &amp; seizoensgebonden · 2 porties per kooksessie</p>
+    <div class="meals">
+      <div class="meal-pill"><strong>Maandag 🥢</strong>Chinese Rundvlees Roerbak met Paksoi</div>
+      <div class="meal-pill"><strong>Woensdag 🌶️</strong>Thaise Groene Curry met Kipfilet</div>
+      <div class="meal-pill"><strong>Vrijdag 🌱</strong>Geroosterde Bloemkool met Linzen &amp; Harissa</div>
+    </div>
   </div>
   <div class="cards">
     <a class="card" href="weekmenu.html">
       <div class="icon">🍽️</div>
       <h2>Weekmenu</h2>
-      <p>Drie recepten met stap-voor-stap bereidingsinstructies. Maandag tonijn, woensdag kip, vrijdag vegetarisch dal.</p>
+      <p>Drie recepten met stap-voor-stap bereidingsinstructies. Maandag Chinees, woensdag Thais, vrijdag Midden-Oosters (vegetarisch).</p>
       <span class="arrow">Bekijk recepten →</span>
     </a>
     <a class="card" href="boodschappenlijst.html">
       <div class="icon">🛒</div>
       <h2>Boodschappenlijst</h2>
-      <p>Alle ingrediënten voor de week op een rij, gegroepeerd per supermarktafdeling. Inclusief aantekeningen over houdbaarheid.</p>
+      <p>Alle ingrediënten voor de week, gegroepeerd per supermarktafdeling. Inclusief 37 items in Asana.</p>
       <span class="arrow">Bekijk boodschappen →</span>
     </a>
   </div>
