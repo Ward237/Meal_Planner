@@ -3,382 +3,345 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weekmenu — 20 april 2026</title>
+  <title>Weekmenu — 27 april 2026</title>
   <style>
-    :root {
-      --primary: #2d6a4f;
-      --accent: #52b788;
-      --light: #d8f3dc;
-      --bg: #f8fdf9;
-      --card: #ffffff;
-      --text: #1b4332;
-      --muted: #6b8f71;
-      --border: #b7e4c7;
-    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(135deg, var(--primary), #1b4332);
-      color: white;
-      padding: 2.5rem 2rem 2rem;
-      text-align: center;
-    }
-    header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.25rem; }
-    header p { opacity: 0.85; font-size: 0.95rem; }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 1rem;
-      background: var(--primary);
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 0.4rem 1rem;
-      border-radius: 999px;
-      font-size: 0.875rem;
-      background: rgba(255,255,255,0.15);
-      transition: background 0.2s;
-    }
-    nav a:hover { background: rgba(255,255,255,0.3); }
-    .container { max-width: 860px; margin: 0 auto; padding: 2rem 1rem; }
-    .section-title {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin: 2.5rem 0 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--border);
-    }
-    .meal-card {
-      background: var(--card);
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      overflow: hidden;
-      margin-bottom: 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    .meal-header {
-      background: var(--light);
-      padding: 1.25rem 1.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .meal-header .day { font-size: 0.8rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
-    .meal-header h2 { font-size: 1.25rem; color: var(--primary); margin: 0.25rem 0; }
-    .meal-meta { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem; }
-    .meal-meta span {
-      font-size: 0.8rem;
-      background: white;
-      padding: 0.2rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      color: var(--muted);
-    }
-    .badge-veg { background: #e8f5e9 !important; color: #2e7d32 !important; border-color: #a5d6a7 !important; }
-    .badge-micro { background: #fff3e0 !important; color: #e65100 !important; border-color: #ffcc80 !important; }
-    .meal-body { padding: 1.5rem; }
-    .meal-body h3 { font-size: 1rem; font-weight: 600; color: var(--primary); margin: 1rem 0 0.5rem; }
-    .meal-body h3:first-child { margin-top: 0; }
-    .meal-body ul { list-style: none; padding: 0; }
-    .meal-body ul li {
-      padding: 0.3rem 0 0.3rem 1.25rem;
-      position: relative;
-      font-size: 0.9rem;
-      border-bottom: 1px solid #f0f0f0;
-    }
-    .meal-body ul li:last-child { border-bottom: none; }
-    .meal-body ul li::before {
-      content: '·';
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-weight: bold;
-      font-size: 1.2rem;
-      top: 0.15rem;
-    }
-    .meal-body ol { padding-left: 1.5rem; }
-    .meal-body ol li { padding: 0.35rem 0; font-size: 0.9rem; }
-    .tip {
-      background: #fff8e1;
-      border-left: 3px solid #ffc107;
-      padding: 0.75rem 1rem;
-      border-radius: 0 6px 6px 0;
-      font-size: 0.875rem;
-      margin-top: 1rem;
-      color: #5d4037;
-    }
-    .leftovers-card {
-      background: var(--card);
-      border: 1px dashed var(--border);
-      border-radius: 10px;
-      padding: 1rem 1.5rem;
-      margin-bottom: 1.5rem;
-      font-size: 0.875rem;
-      color: var(--muted);
-    }
-    .leftovers-card strong { color: var(--primary); }
-
-    /* Shopping list */
-    .shop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
-    .shop-cat {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .shop-cat-title {
-      background: var(--light);
-      padding: 0.6rem 1rem;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--primary);
-      border-bottom: 1px solid var(--border);
-    }
-    .shop-cat ul { list-style: none; padding: 0.5rem 1rem 0.75rem; }
-    .shop-cat ul li {
-      padding: 0.3rem 0;
-      font-size: 0.875rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      border-bottom: 1px solid #f5f5f5;
-    }
-    .shop-cat ul li:last-child { border-bottom: none; }
-    .shop-cat ul li input[type=checkbox] { accent-color: var(--primary); width: 15px; height: 15px; flex-shrink: 0; cursor: pointer; }
-    .shop-cat ul li label { cursor: pointer; }
-    .pantry { color: var(--muted); font-style: italic; font-size: 0.8rem; }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      color: var(--muted);
-      font-size: 0.8rem;
-      border-top: 1px solid var(--border);
-      margin-top: 2rem;
-    }
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.5rem; }
-      .shop-grid { grid-template-columns: 1fr; }
-    }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #f5f0eb; color: #2d2d2d; min-height: 100vh; }
+    header { background: linear-gradient(135deg, #2c5f2e 0%, #4a8c4e 100%); color: white; padding: 2.5rem 2rem 2rem; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
+    header h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+    header p { font-size: 0.95rem; opacity: 0.85; }
+    nav { display: flex; justify-content: center; gap: 0.5rem; padding: 1rem; background: white; border-bottom: 2px solid #e8e0d8; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    nav button { background: #f5f0eb; border: 2px solid #d4c8bc; color: #555; padding: 0.4rem 1rem; border-radius: 20px; cursor: pointer; font-size: 0.88rem; font-weight: 500; transition: all 0.2s; }
+    nav button:hover, nav button.active { background: #2c5f2e; border-color: #2c5f2e; color: white; }
+    .content { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    .week-overview { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-bottom: 2rem; }
+    .meal-card { background: white; border-radius: 12px; padding: 1.25rem 1.5rem; box-shadow: 0 2px 12px rgba(0,0,0,0.07); border-left: 4px solid #4a8c4e; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; }
+    .meal-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+    .meal-card.leftover { border-left-color: #a8c5a0; background: #fafaf8; }
+    .meal-card .day-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 0.35rem; }
+    .meal-card h3 { font-size: 1.05rem; font-weight: 600; color: #1a1a1a; line-height: 1.3; }
+    .meal-card .meta { margin-top: 0.6rem; display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .tag { display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.76rem; padding: 0.2rem 0.6rem; border-radius: 12px; font-weight: 500; }
+    .tag.time { background: #e8f4e8; color: #2c5f2e; }
+    .tag.cuisine { background: #f0eaff; color: #6b3fa0; }
+    .tag.veg { background: #e8f5e0; color: #3a7a20; }
+    .tag.reheat { background: #fff3e0; color: #e65100; }
+    .recipe { background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.08); margin-bottom: 1.5rem; }
+    .recipe-header { border-bottom: 2px solid #f0ebe5; padding-bottom: 1.25rem; margin-bottom: 1.5rem; }
+    .recipe-header h2 { font-size: 1.5rem; font-weight: 700; color: #1a1a1a; margin-bottom: 0.75rem; line-height: 1.3; }
+    .recipe-meta { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .recipe-body { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; }
+    @media (max-width: 600px) { .recipe-body { grid-template-columns: 1fr; } }
+    .ingredients h3, .instructions h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.2px; color: #888; font-weight: 700; margin-bottom: 0.75rem; }
+    .ingredients ul { list-style: none; }
+    .ingredients li { padding: 0.4rem 0; border-bottom: 1px solid #f0ebe5; font-size: 0.93rem; display: flex; align-items: flex-start; gap: 0.5rem; }
+    .ingredients li::before { content: "·"; color: #4a8c4e; font-weight: bold; font-size: 1.1rem; flex-shrink: 0; }
+    .ingredients li:last-child { border-bottom: none; }
+    .instructions ol { list-style: none; counter-reset: step-counter; }
+    .instructions li { counter-increment: step-counter; padding: 0.65rem 0 0.65rem 2.5rem; position: relative; font-size: 0.93rem; border-bottom: 1px solid #f5f0eb; line-height: 1.6; }
+    .instructions li:last-child { border-bottom: none; }
+    .instructions li::before { content: counter(step-counter); position: absolute; left: 0; top: 0.6rem; background: #2c5f2e; color: white; width: 1.6rem; height: 1.6rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; }
+    .tip-box { margin-top: 1.25rem; background: #fff8e1; border-left: 4px solid #ffc107; border-radius: 0 8px 8px 0; padding: 0.85rem 1rem; font-size: 0.9rem; line-height: 1.5; }
+    .tip-box strong { color: #e65100; }
+    .shopping-section { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+    .shopping-section h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: #2c5f2e; font-weight: 700; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #e8f4e8; }
+    .shopping-section ul { list-style: none; }
+    .shopping-section li { padding: 0.55rem 0; font-size: 0.92rem; border-bottom: 1px dashed #f0ebe5; display: flex; align-items: center; gap: 0.75rem; cursor: pointer; transition: background 0.15s; border-radius: 4px; padding-left: 0.25rem; }
+    .shopping-section li:hover { background: #f9f7f5; }
+    .shopping-section li:last-child { border-bottom: none; }
+    .shopping-section li .checkbox { width: 18px; height: 18px; border: 2px solid #ccc; border-radius: 4px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+    .shopping-section li.checked .checkbox { background: #4a8c4e; border-color: #4a8c4e; }
+    .shopping-section li.checked .checkbox::after { content: "✓"; color: white; font-size: 12px; font-weight: bold; }
+    .shopping-section li.checked span { text-decoration: line-through; color: #aaa; }
+    .pantry-note { color: #999; font-style: italic; font-size: 0.82rem; }
+    footer { text-align: center; padding: 2rem; color: #aaa; font-size: 0.82rem; }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>🥗 Weekmenu</h1>
-  <p>Week van 20 april 2026 · 3 maaltijden · 2 porties per kooksessie</p>
+  <h1>🥦 Weekmenu — 27 april 2026</h1>
+  <p>3 maaltijden · 2 porties per maaltijd · Low-carb &amp; seizoensgroenten</p>
 </header>
 
 <nav>
-  <a href="#maandag">Maandag</a>
-  <a href="#woensdag">Woensdag</a>
-  <a href="#vrijdag">Vrijdag</a>
-  <a href="#boodschappen">Boodschappen</a>
+  <button class="active" onclick="showTab('overzicht')">📅 Overzicht</button>
+  <button onclick="showTab('maandag')">Ma/Di — Kabeljauw</button>
+  <button onclick="showTab('woensdag')">Wo/Do — Koreaanse Kip</button>
+  <button onclick="showTab('vrijdag')">Vr/Za — Linzendal</button>
+  <button onclick="showTab('boodschappen')">🛒 Boodschappen</button>
 </nav>
 
-<div class="container">
+<div class="content">
 
-  <div class="section-title">🍽️ Weekmenu</div>
+  <!-- OVERZICHT -->
+  <div id="overzicht" class="tab-content active">
+    <div class="week-overview">
 
-  <!-- MAANDAG -->
-  <div class="meal-card" id="maandag">
-    <div class="meal-header">
-      <div class="day">Maandag &amp; Dinsdag</div>
-      <h2>Heek met bloemkoolpuree, gestoofde prei en mosterdsaus</h2>
-      <div class="meal-meta">
-        <span>🕐 25 min</span>
-        <span>😊 Makkelijk</span>
-        <span>🇫🇷 Frans/Nederlands</span>
-        <span class="badge-micro">♻️ Verwarmbaar</span>
+      <div class="meal-card" onclick="showTab('maandag')">
+        <div class="day-label">Maandag</div>
+        <h3>Kabeljauw met groene asperges en kappertjes-citroensaus</h3>
+        <div class="meta">
+          <span class="tag time">⏱ 25 min</span>
+          <span class="tag cuisine">🇳🇱 Nederlands</span>
+          <span class="tag reheat">♻️ Verwarmbaar</span>
+        </div>
       </div>
-    </div>
-    <div class="meal-body">
-      <h3>Ingrediënten (2 porties)</h3>
-      <ul>
-        <li>400g heekfilet (vers)</li>
-        <li>1 kleine bloemkool (±600g)</li>
-        <li>2 preien, in ringen van 2 cm</li>
-        <li>2 el Dijonmosterd</li>
-        <li>100ml kookroom</li>
-        <li>100ml kippenbouillon</li>
-        <li>2 teentjes knoflook, fijngehakt</li>
-        <li>30g roomboter</li>
-        <li>Paar takjes verse tijm</li>
-        <li>Handvol verse peterselie, fijngehakt</li>
-        <li>½ citroen (sap)</li>
-        <li>1 el olijfolie · Zout en peper</li>
-      </ul>
-      <h3>Bereiding</h3>
-      <ol>
-        <li>Snijd de bloemkool in roosjes en kook 10–12 min in gezouten water tot gaar. Afgieten, stampen met 15g boter, op smaak met zout, peper en nootmuskaat.</li>
-        <li>Verhit olijfolie in een brede pan. Bak de preien met tijm 8–10 min tot zacht en licht gekarameliseerd. Voeg knoflook toe de laatste 2 min. Opzij zetten.</li>
-        <li>Dep de heekfilets droog. Bestrooi met zout en peper. Smelt 15g boter in de pan op hoog vuur. Bak de vis 2–3 min per kant tot goudbruin en gaar.</li>
-        <li>Mosterdsaus: voeg bouillon toe en roer aanbaksels los. Voeg kookroom en mosterd toe. Laat 2–3 min inkoken. Op smaak met citroensap, zout en peper.</li>
-        <li>Verdeel bloemkoolpuree over de borden. Leg prei en heek erop. Schep de mosterdsaus erover. Garneer met peterselie.</li>
-      </ol>
-      <div class="tip">♻️ <strong>Opwarmen:</strong> Bewaar vis, puree en prei apart. Verwarm op 60% vermogen in de magnetron, losjes afgedekt. Voeg een scheutje water toe aan de puree.</div>
+
+      <div class="meal-card leftover">
+        <div class="day-label">Dinsdag</div>
+        <h3>Restjes kabeljauw ♻️</h3>
+        <div class="meta"><span class="tag reheat">Van maandag</span></div>
+      </div>
+
+      <div class="meal-card" onclick="showTab('woensdag')">
+        <div class="day-label">Woensdag</div>
+        <h3>Koreaanse roerbakkip met broccoli en bloemkoolrijst</h3>
+        <div class="meta">
+          <span class="tag time">⏱ 30 min</span>
+          <span class="tag cuisine">🇰🇷 Koreaans</span>
+          <span class="tag reheat">♻️ Verwarmbaar</span>
+        </div>
+      </div>
+
+      <div class="meal-card leftover">
+        <div class="day-label">Donderdag</div>
+        <h3>Restjes Koreaanse kip ♻️</h3>
+        <div class="meta"><span class="tag reheat">Van woensdag</span></div>
+      </div>
+
+      <div class="meal-card" onclick="showTab('vrijdag')">
+        <div class="day-label">Vrijdag</div>
+        <h3>Indiase rode linzendal met bloemkool en spinazie</h3>
+        <div class="meta">
+          <span class="tag time">⏱ 45 min</span>
+          <span class="tag cuisine">🇮🇳 Indiaas</span>
+          <span class="tag veg">🌱 Vegetarisch</span>
+          <span class="tag reheat">♻️ Verwarmbaar</span>
+        </div>
+      </div>
+
+      <div class="meal-card leftover">
+        <div class="day-label">Zaterdag</div>
+        <h3>Restjes linzendal ♻️</h3>
+        <div class="meta"><span class="tag reheat">Van vrijdag</span></div>
+      </div>
+
     </div>
   </div>
 
-  <div class="leftovers-card">
-    <strong>Dinsdag</strong> — Restjes heek met bloemkoolpuree ♻️<br>
-    <span>Verwarm op 60% vermogen, vis losjes afgedekt met een bord</span>
+  <!-- MAANDAG -->
+  <div id="maandag" class="tab-content">
+    <div class="recipe">
+      <div class="recipe-header">
+        <h2>🐟 Kabeljauw met groene asperges en kappertjes-citroensaus</h2>
+        <div class="recipe-meta">
+          <span class="tag time">⏱ 25 minuten</span>
+          <span class="tag cuisine">🇳🇱 Nederlands</span>
+          <span class="tag reheat">♻️ Verwarmbaar</span>
+        </div>
+      </div>
+      <div class="recipe-body">
+        <div class="ingredients">
+          <h3>Ingrediënten (2 porties)</h3>
+          <ul>
+            <li>400g kabeljauwfilet (vers), in 2 stukken</li>
+            <li>500g groene asperges</li>
+            <li>2 el kappertjes (uitgelekt)</li>
+            <li>1 citroen (sap + rasp)</li>
+            <li>2 teentjes knoflook, fijngehakt</li>
+            <li>30g boter</li>
+            <li>Handvol verse peterselie, fijngehakt</li>
+            <li>2 el olijfolie</li>
+            <li>Zout en versgemalen peper</li>
+          </ul>
+        </div>
+        <div class="instructions">
+          <h3>Bereiding</h3>
+          <ol>
+            <li>Breek de harde onderkanten van de asperges af. Breng een pan gezouten water aan de kook en blancheer de asperges 3–4 minuten tot net gaar maar nog met beet. Giet af en dep droog.</li>
+            <li>Dep de kabeljauw droog met keukenpapier. Bestrooi royaal met zout en versgemalen peper.</li>
+            <li>Verhit de olijfolie in een koekenpan op hoog vuur. Bak de kabeljauw 3–4 minuten per kant tot goudbruin en gaar (het vlees valt makkelijk uit elkaar). Leg opzij op een bord.</li>
+            <li>Zet het vuur lager. Smelt de boter in dezelfde pan. Fruit de knoflook 1 minuut. Voeg kappertjes, citroensap en citroenrasp toe. Laat 1 minuut pruttelen.</li>
+            <li>Voeg de asperges toe aan de saus en warm ze 1–2 minuten door.</li>
+            <li>Leg de kabeljauw terug in de pan en warm kort op. Bestrooi met gehakte peterselie en serveer direct.</li>
+          </ol>
+          <div class="tip-box">
+            <strong>♻️ Opwarmen:</strong> Bewaar de asperges apart van de vis. Opwarmen in de magnetron op 60–70% vermogen ca. 2 minuten. Dek losjes af om uitdrogen te voorkomen.
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- WOENSDAG -->
-  <div class="meal-card" id="woensdag">
-    <div class="meal-header">
-      <div class="day">Woensdag &amp; Donderdag</div>
-      <h2>Kip-shawarma schaal met geroosterde paprika en knoflooktsatsiki</h2>
-      <div class="meal-meta">
-        <span>🕐 30 min</span>
-        <span>😊 Makkelijk</span>
-        <span>🌍 Midden-Oosters</span>
-        <span class="badge-micro">♻️ Verwarmbaar</span>
+  <div id="woensdag" class="tab-content">
+    <div class="recipe">
+      <div class="recipe-header">
+        <h2>🐔 Koreaanse roerbakkip met broccoli en bloemkoolrijst</h2>
+        <div class="recipe-meta">
+          <span class="tag time">⏱ 30 minuten</span>
+          <span class="tag cuisine">🇰🇷 Koreaans</span>
+          <span class="tag reheat">♻️ Verwarmbaar</span>
+        </div>
+      </div>
+      <div class="recipe-body">
+        <div class="ingredients">
+          <h3>Ingrediënten (2 porties)</h3>
+          <ul>
+            <li>500g kipfilet, in dunne reepjes</li>
+            <li>1 broccoli (~400g), in kleine roosjes</li>
+            <li>1 courgette, in halve maantjes</li>
+            <li>½ bloemkool (~350g), voor bloemkoolrijst</li>
+            <li>3 el sojasaus</li>
+            <li>1 el gochujang of sriracha</li>
+            <li>1 el sesamolie</li>
+            <li>1 el rijstazijn</li>
+            <li>1 el honing</li>
+            <li>2 teentjes knoflook, geperst</li>
+            <li>2 cm verse gember, geraspt</li>
+            <li>2 el zonnebloemolie</li>
+            <li>4 bosuitjes, in ringetjes</li>
+            <li>1 el sesamzaad (geroosterd)</li>
+          </ul>
+        </div>
+        <div class="instructions">
+          <h3>Bereiding</h3>
+          <ol>
+            <li>Maak de marinade: meng sojasaus, gochujang, sesamolie, rijstazijn, honing, knoflook en gember. Voeg de kipfiletreepjes toe en marineer 10 minuten.</li>
+            <li>Verwijder bladeren van de bloemkool. Snijd in grove stukken en pulseer in een keukenmachine tot rijstkorrelgrootte (of rasp op een grove rasp).</li>
+            <li>Verhit 1 el zonnebloemolie in een wok op hoog vuur. Roerbak de kip met marinade 5–6 minuten tot gaar en licht gekarameliseerd. Schep uit de pan.</li>
+            <li>Voeg nog 1 el olie toe. Roerbak broccoli en courgette 4–5 minuten op hoog vuur. Kip terug in de pan, alles goed mengen.</li>
+            <li>Verhit tegelijkertijd een andere pan met wat olie. Bak de bloemkoolrijst 3–4 minuten op hoog vuur. Breng op smaak met zout.</li>
+            <li>Serveer de roerbakkip op de bloemkoolrijst. Garneer met bosuitjes en sesamzaad.</li>
+          </ol>
+          <div class="tip-box">
+            <strong>♻️ Opwarmen:</strong> Bewaar kip en bloemkoolrijst apart. Opwarmen in de magnetron: kip 2 minuten op 80%, bloemkoolrijst 1,5 minuut. Bloemkoolrijst wordt snel papperig — druk overtollig vocht eruit voor het opwarmen.
+          </div>
+        </div>
       </div>
     </div>
-    <div class="meal-body">
-      <h3>Ingrediënten (2 porties)</h3>
-      <ul>
-        <li>400g kipfilet</li>
-        <li><em>Shawarma marinade:</em> 2 tl komijn, 1 tl gerookt paprikapoeder, 1 tl koriander, ½ tl kurkuma, ¼ tl kaneel, ¼ tl cayennepeper, 2 el olijfolie, sap ½ citroen</li>
-        <li>2 rode paprika's, in kwarten</li>
-        <li>200g cherrytomaatjes</li>
-        <li>2 handen gemengde sla of rucola</li>
-        <li><em>Tsatsiki:</em> 200g Griekse yoghurt · ½ komkommer (uitgeknepen) · 2 teentjes knoflook · Verse munt of dille · Sap ½ citroen · Olijfolie</li>
-      </ul>
-      <h3>Bereiding</h3>
-      <ol>
-        <li>Meng alle marinade-ingrediënten. Snijd kipfilet in plakken van 1 cm. Meng met marinade en laat 15 min intrekken.</li>
-        <li>Tsatsiki: rasp komkommer en knijp vocht eruit. Meng met yoghurt, knoflook, munt, citroen en olijfolie. Op smaak met zout. Koud wegzetten.</li>
-        <li>Paprika's op bakplaat met olijfolie, zout en peper. Grill 15–20 min op 220°C. Cherrytomaten de laatste 10 min mee.</li>
-        <li>Bak gemarineerde kip in een hete pan 3–4 min per kant tot goudbruin en gaar.</li>
-        <li>Verdeel sla over schalen. Leg geroosterde paprika, tomaten en kip erop. Royale lepel tsatsiki erbij.</li>
-      </ol>
-      <div class="tip">♻️ <strong>Opwarmen:</strong> Bewaar sla en tsatsiki apart. Verwarm kip en paprika in magnetron (2–3 min op vol vermogen). Bouw de schaal opnieuw op na het opwarmen.</div>
-    </div>
-  </div>
-
-  <div class="leftovers-card">
-    <strong>Donderdag</strong> — Restjes kip-shawarma schaal ♻️<br>
-    <span>Verwarm kip en paprika in magnetron, sla en tsatsiki koud erbij</span>
   </div>
 
   <!-- VRIJDAG -->
-  <div class="meal-card" id="vrijdag">
-    <div class="meal-header">
-      <div class="day">Vrijdag &amp; Zaterdag</div>
-      <h2>Mexicaanse zwarte bonenschotel met geroosterde zoete aardappel en avocadodip</h2>
-      <div class="meal-meta">
-        <span>🕐 50 min</span>
-        <span>😐 Gemiddeld</span>
-        <span>🇲🇽 Mexicaans</span>
-        <span class="badge-veg">🌱 Vegetarisch</span>
-        <span class="badge-micro">♻️ Verwarmbaar</span>
+  <div id="vrijdag" class="tab-content">
+    <div class="recipe">
+      <div class="recipe-header">
+        <h2>🫘 Indiase rode linzendal met bloemkool en spinazie</h2>
+        <div class="recipe-meta">
+          <span class="tag time">⏱ 45 minuten</span>
+          <span class="tag cuisine">🇮🇳 Indiaas</span>
+          <span class="tag veg">🌱 Vegetarisch</span>
+          <span class="tag reheat">♻️ Verwarmbaar</span>
+        </div>
+      </div>
+      <div class="recipe-body">
+        <div class="ingredients">
+          <h3>Ingrediënten (2 porties)</h3>
+          <ul>
+            <li>200g rode linzen (gespoeld)</li>
+            <li>½ bloemkool (~350g), in kleine roosjes</li>
+            <li>150g verse spinazie</li>
+            <li>1 blik gepelde tomaten (400g)</li>
+            <li>500ml groentebouillon</li>
+            <li>1 grote ui, fijngesneden</li>
+            <li>3 teentjes knoflook, fijngehakt</li>
+            <li>2 cm verse gember, geraspt</li>
+            <li>1 el tomatenpuree</li>
+            <li>2 el zonnebloemolie</li>
+            <li>1 tl kurkuma, 1 tl gemalen komijn, 1 tl korianderpoeder, ½ tl chilipoeder, ½ tl garam masala</li>
+            <li>Handvol verse koriander</li>
+            <li>Naturel yoghurt (optioneel)</li>
+          </ul>
+        </div>
+        <div class="instructions">
+          <h3>Bereiding</h3>
+          <ol>
+            <li>Verhit de olie in een grote pan op middelhoog vuur. Fruit de ui 6–8 minuten tot zacht en goudgeel.</li>
+            <li>Voeg knoflook en gember toe. Bak 2 minuten. Voeg kurkuma, komijn, koriander en chilipoeder toe. Roer 1–2 minuten tot de kruiden geuren.</li>
+            <li>Roer de tomatenpuree erdoor en bak 1 minuut mee. Voeg de gepelde tomaten toe en plet ze grof. Laat 3 minuten inkoken.</li>
+            <li>Voeg linzen en groentebouillon toe. Breng aan de kook, zet het vuur laag en laat 15 minuten sudderen (zonder deksel) tot de linzen zacht zijn.</li>
+            <li>Voeg de bloemkoolroosjes toe. Laat nog 10 minuten sudderen tot gaar.</li>
+            <li>Roer de spinazie erdoor. Laat 2 minuten slinken. Breng op smaak met garam masala, zout en peper.</li>
+            <li>Serveer met verse koriander en eventueel een lepel yoghurt.</li>
+          </ol>
+          <div class="tip-box">
+            <strong>♻️ Opwarmen:</strong> Dal trekt na staan alleen maar beter. Bewaar de yoghurt apart. Opwarmen in de magnetron: 2–3 minuten op 80% vermogen, tussendoor even roeren. Voeg eventueel een scheutje water toe als de dal te dik is geworden.
+          </div>
+        </div>
       </div>
     </div>
-    <div class="meal-body">
-      <h3>Ingrediënten (2 porties)</h3>
-      <ul>
-        <li>2 blikken zwarte bonen (à 400g), uitgelekt</li>
-        <li>1 middelgrote zoete aardappel (±350g), in blokjes van 2 cm</li>
-        <li>1 blik gepelde tomaten (400g)</li>
-        <li>1 rode ui, fijngehakt</li>
-        <li>2 teentjes knoflook, fijngehakt</li>
-        <li>1 rode paprika, in blokjes</li>
-        <li>1 el chipotle-pasta</li>
-        <li>2 tl komijn · 1 tl koriander · 1 tl gerookt paprikapoeder</li>
-        <li><em>Avocadodip:</em> 2 rijpe avocado's · sap + rasp 1 limoen · 1 teentje knoflook · Verse koriander · Snufje komijn</li>
-      </ul>
-      <h3>Bereiding</h3>
-      <ol>
-        <li>Oven voorverwarmen op 220°C. Zoete-aardappelblokjes op bakplaat met olijfolie, 1 tl komijn, zout en peper. Rooster 25–30 min tot goudbruin, halverwege omschudden.</li>
-        <li>Bak rode ui in olijfolie 5 min glazig. Voeg knoflook en paprika toe, 3 min. Voeg chipotle, komijn, koriander en paprikapoeder toe. Bak 1 min.</li>
-        <li>Voeg tomaten en zwarte bonen toe met 100ml water. Laat 15 min pruttelen op laag vuur. Op smaak met zout en peper.</li>
-        <li>Avocadodip: prak avocado's met een vork. Voeg limoensap, -rasp, knoflook en koriander toe. Op smaak met komijn, zout en peper.</li>
-        <li>Schep bonenschotel in diepe kommen. Zoete aardappel erop. Royale lepel avocadodip toevoegen. Garneer met extra verse koriander.</li>
-      </ol>
-      <div class="tip">♻️ <strong>Opwarmen:</strong> Bewaar avocadodip apart (dek af met folie direct op het oppervlak). Verwarm bonenschotel + zoete aardappel (3–4 min op vol vermogen). Avocadodip pas na het opwarmen toevoegen.</div>
-    </div>
   </div>
 
-  <div class="leftovers-card">
-    <strong>Zaterdag</strong> — Restjes mexicaanse bonenschotel ♻️<br>
-    <span>Bonenschotel en zoete aardappel opwarmen in magnetron, avocadodip koud erbij</span>
-  </div>
+  <!-- BOODSCHAPPEN -->
+  <div id="boodschappen" class="tab-content">
+    <p style="color:#777; font-size:0.88rem; margin-bottom:1.25rem;">Klik op een item om het af te vinken 🛒</p>
 
-  <!-- SHOPPING LIST -->
-  <div class="section-title" id="boodschappen">🛒 Boodschappenlijst</div>
-  <p style="font-size:0.875rem; color:var(--muted); margin-bottom:1rem;">Vink af terwijl je boodschappen doet. Week van 20 april · aankopen vóór zondag 19 april.</p>
+    <div class="shopping-section">
+      <h3>🥩 Vlees &amp; vis</h3>
+      <ul>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>400g kabeljauwfilet (vers) — koop zo vers mogelijk</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>500g kipfilet</span></li>
+      </ul>
+    </div>
 
-  <div class="shop-grid">
-    <div class="shop-cat">
-      <div class="shop-cat-title">🐟 Vlees, vis &amp; vleeswaren</div>
+    <div class="shopping-section">
+      <h3>🥛 Zuivel</h3>
       <ul>
-        <li><input type="checkbox" id="v1"><label for="v1">400g heekfilet (vers)</label></li>
-        <li><input type="checkbox" id="v2"><label for="v2">400g kipfilet</label></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>30g boter</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Naturel yoghurt (klein potje, optioneel bij dal)</span></li>
       </ul>
     </div>
-    <div class="shop-cat">
-      <div class="shop-cat-title">🥛 Zuivel &amp; eieren</div>
+
+    <div class="shopping-section">
+      <h3>🥬 Groente &amp; fruit — seizoen!</h3>
       <ul>
-        <li><input type="checkbox" id="z1"><label for="z1">100ml kookroom</label></li>
-        <li><input type="checkbox" id="z2"><label for="z2">200g Griekse yoghurt (10% vet)</label></li>
-        <li><input type="checkbox" id="z3"><label for="z3"><span class="pantry">30g roomboter (mogelijk al in huis)</span></label></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>500g groene asperges 🌿 seizoen!</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>1 broccoli (~400g)</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>1 bloemkool (groot) — ½ voor kip, ½ voor dal</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>1 courgette</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>150g verse spinazie</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>1 grote ui</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>1 bol knoflook</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>4 bosuitjes</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>2 citroenen</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Verse gember (~5 cm stukje)</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Handvol verse peterselie</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Handvol verse koriander</span></li>
       </ul>
     </div>
-    <div class="shop-cat">
-      <div class="shop-cat-title">🥦 Groente &amp; fruit</div>
+
+    <div class="shopping-section">
+      <h3>🥫 Houdbaar</h3>
       <ul>
-        <li><input type="checkbox" id="g1"><label for="g1">1 kleine bloemkool (±600g)</label></li>
-        <li><input type="checkbox" id="g2"><label for="g2">2 preien</label></li>
-        <li><input type="checkbox" id="g3"><label for="g3">3 rode paprika's</label></li>
-        <li><input type="checkbox" id="g4"><label for="g4">200g cherrytomaatjes</label></li>
-        <li><input type="checkbox" id="g5"><label for="g5">1 zoete aardappel (±350g)</label></li>
-        <li><input type="checkbox" id="g6"><label for="g6">2 rijpe avocado's</label></li>
-        <li><input type="checkbox" id="g7"><label for="g7">½ komkommer</label></li>
-        <li><input type="checkbox" id="g8"><label for="g8">2 handen gemengde sla / rucola</label></li>
-        <li><input type="checkbox" id="g9"><label for="g9">1 rode ui</label></li>
-        <li><input type="checkbox" id="g10"><label for="g10">1 citroen</label></li>
-        <li><input type="checkbox" id="g11"><label for="g11">1 limoen</label></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>200g rode linzen</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>1 blik gepelde tomaten (400g)</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>1 groentebouillonblokje</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>1 potje kappertjes</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Tomatenpuree (tube of blikje)</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Gochujang (Koreaanse chilipasta) of sriracha</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Sesamolie</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Sesamzaad</span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Sojasaus <span class="pantry-note">(mogelijk al in huis)</span></span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Rijstazijn <span class="pantry-note">(mogelijk al in huis)</span></span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Honing <span class="pantry-note">(mogelijk al in huis)</span></span></li>
       </ul>
     </div>
-    <div class="shop-cat">
-      <div class="shop-cat-title">🥫 Houdbaar</div>
+
+    <div class="shopping-section">
+      <h3>🌿 Kruiden, specerijen &amp; olie</h3>
       <ul>
-        <li><input type="checkbox" id="h1"><label for="h1">2 blikken zwarte bonen (à 400g)</label></li>
-        <li><input type="checkbox" id="h2"><label for="h2">1 blik gepelde tomaten (400g)</label></li>
-        <li><input type="checkbox" id="h3"><label for="h3">chipotle-pasta (1 potje)</label></li>
-        <li><input type="checkbox" id="h4"><label for="h4"><span class="pantry">1 kippenbouillonblokje (mogelijk al in huis)</span></label></li>
-        <li><input type="checkbox" id="h5"><label for="h5"><span class="pantry">Dijonmosterd (mogelijk al in huis)</span></label></li>
-      </ul>
-    </div>
-    <div class="shop-cat">
-      <div class="shop-cat-title">🌿 Verse kruiden</div>
-      <ul>
-        <li><input type="checkbox" id="k1"><label for="k1">Verse tijm (klein bosje)</label></li>
-        <li><input type="checkbox" id="k2"><label for="k2">Verse peterselie (half bosje)</label></li>
-        <li><input type="checkbox" id="k3"><label for="k3">Verse munt of dille (half bosje)</label></li>
-        <li><input type="checkbox" id="k4"><label for="k4">Verse koriander (1 bosje)</label></li>
-      </ul>
-    </div>
-    <div class="shop-cat">
-      <div class="shop-cat-title">🧂 Kruiden &amp; specerijen</div>
-      <ul>
-        <li><input type="checkbox" id="s1"><label for="s1"><span class="pantry">Komijn gemalen (mogelijk al in huis)</span></label></li>
-        <li><input type="checkbox" id="s2"><label for="s2"><span class="pantry">Koriander gemalen (mogelijk al in huis)</span></label></li>
-        <li><input type="checkbox" id="s3"><label for="s3"><span class="pantry">Gerookt paprikapoeder (mogelijk al in huis)</span></label></li>
-        <li><input type="checkbox" id="s4"><label for="s4"><span class="pantry">Kurkuma (mogelijk al in huis)</span></label></li>
-        <li><input type="checkbox" id="s5"><label for="s5"><span class="pantry">Kaneel gemalen (mogelijk al in huis)</span></label></li>
-        <li><input type="checkbox" id="s6"><label for="s6"><span class="pantry">Cayennepeper (mogelijk al in huis)</span></label></li>
-        <li><input type="checkbox" id="s7"><label for="s7"><span class="pantry">Nootmuskaat gemalen (mogelijk al in huis)</span></label></li>
-        <li><input type="checkbox" id="s8"><label for="s8"><span class="pantry">Olijfolie (mogelijk al in huis)</span></label></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Kurkuma <span class="pantry-note">(mogelijk al in huis)</span></span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Gemalen komijn <span class="pantry-note">(mogelijk al in huis)</span></span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Korianderpoeder <span class="pantry-note">(mogelijk al in huis)</span></span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Chilipoeder <span class="pantry-note">(mogelijk al in huis)</span></span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Garam masala <span class="pantry-note">(mogelijk al in huis)</span></span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Olijfolie <span class="pantry-note">(mogelijk al in huis)</span></span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Zonnebloemolie <span class="pantry-note">(mogelijk al in huis)</span></span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Zout <span class="pantry-note">(mogelijk al in huis)</span></span></li>
+        <li onclick="toggleCheck(this)"><span class="checkbox"></span><span>Versgemalen peper <span class="pantry-note">(mogelijk al in huis)</span></span></li>
       </ul>
     </div>
   </div>
@@ -386,8 +349,20 @@
 </div>
 
 <footer>
-  Gegenereerd op 18 april 2026 · Weekmenu voor Ward · Volgende aankoopdatum: zondag 19 april 2026
+  Gegenereerd op 25 april 2026 &nbsp;·&nbsp; Aankopen vóór zondag 26 april
 </footer>
+
+<script>
+  function showTab(id) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('nav button').forEach(el => el.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    const tabMap = { overzicht: 0, maandag: 1, woensdag: 2, vrijdag: 3, boodschappen: 4 };
+    const buttons = document.querySelectorAll('nav button');
+    if (tabMap[id] !== undefined) buttons[tabMap[id]].classList.add('active');
+  }
+  function toggleCheck(li) { li.classList.toggle('checked'); }
+</script>
 
 </body>
 </html>
