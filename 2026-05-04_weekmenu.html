@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekmenu — week van 4 mei 2026</title>
+<style>
+  :root {
+    --bg: #faf7f2;
+    --card: #ffffff;
+    --ink: #2a2a2a;
+    --muted: #6b6b6b;
+    --accent: #c2502b;
+    --accent-soft: #f4ddd2;
+    --line: #e8e2d8;
+    --green: #6b8e23;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Georgia', 'Iowan Old Style', serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.65;
+  }
+  header {
+    background: linear-gradient(135deg, #c2502b 0%, #a3401f 100%);
+    color: #fff;
+    padding: 48px 24px 56px;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 2.4rem;
+    margin: 0 0 8px;
+    letter-spacing: 0.5px;
+  }
+  header .subtitle {
+    margin: 0;
+    font-style: italic;
+    opacity: 0.92;
+    font-size: 1.05rem;
+  }
+  nav {
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    padding: 14px 24px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+  nav a {
+    color: var(--accent);
+    text-decoration: none;
+    margin: 0 14px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  nav a:hover { text-decoration: underline; }
+  main {
+    max-width: 880px;
+    margin: -24px auto 0;
+    padding: 0 24px 64px;
+  }
+  section.intro {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    border-left: 5px solid var(--green);
+  }
+  section.intro p { margin: 0; color: var(--muted); }
+  article.day {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  article.day.leftover {
+    background: #fdfaf3;
+    border-left: 4px solid var(--green);
+  }
+  article.day h2 {
+    margin: 0 0 12px;
+    color: var(--accent);
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--accent-soft);
+    padding-bottom: 8px;
+  }
+  .meta {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .meta .badge {
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.78rem;
+  }
+  .meta .badge.veg { background: #e2eed4; color: var(--green); }
+  h3 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.05rem;
+    margin: 22px 0 10px;
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+  ul, ol { padding-left: 22px; margin: 8px 0; }
+  ul li, ol li { margin-bottom: 6px; }
+  .tip {
+    margin-top: 18px;
+    padding: 12px 16px;
+    background: var(--accent-soft);
+    border-radius: 6px;
+    font-style: italic;
+    color: #6b3520;
+    font-size: 0.95rem;
+  }
+  .shopping {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 28px 32px;
+    margin-top: 36px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .shopping h2 {
+    color: var(--green);
+    border-bottom: 2px solid #e2eed4;
+    padding-bottom: 8px;
+  }
+  .shopping h3 {
+    color: var(--green);
+    border-bottom: 1px dashed var(--line);
+    padding-bottom: 4px;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    padding: 24px;
+    font-size: 0.88rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.7rem; }
+    main { padding: 0 14px 40px; }
+    article.day, .shopping, section.intro { padding: 20px 18px; }
+    nav a { margin: 0 8px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Weekmenu — week van 4 mei 2026</h1>
+  <p class="subtitle">Voor Ward · 1 persoon · 2 porties per maaltijd · 6 dagen / 3 kookmomenten</p>
+</header>
+<nav>
+  <a href="#maandag">Ma</a>
+  <a href="#dinsdag">Di</a>
+  <a href="#woensdag">Wo</a>
+  <a href="#donderdag">Do</a>
+  <a href="#vrijdag">Vr</a>
+  <a href="#zaterdag">Za</a>
+  <a href="#boodschappen">Boodschappen</a>
+</nav>
+<main>
+  <section class="intro">
+    <p>Drie kookmomenten dekken zes dagen: maandag, woensdag en vrijdag wordt gekookt; dinsdag, donderdag en zaterdag is restje-dag. Alle gerechten zijn laag-koolhydraat, rijk aan groente en vezels, en verwarmen heerlijk in de magnetron.</p>
+  </section>
+
+  <article class="day" id="maandag">
+    <h2>Maandag — Mexicaanse rundergehakt-pan met paprika en kidneybonen</h2>
+    <div class="meta">
+      <span>⏱ 25 minuten</span>
+      <span>🎯 Makkelijk</span>
+      <span class="badge">Verwarmbaar</span>
+    </div>
+    <h3>Ingrediënten (2 porties)</h3>
+    <ul>
+      <li>300g rundergehakt (vers)</li>
+      <li>1 grote ui, 2 teentjes knoflook</li>
+      <li>2 paprika's (rood en geel), in blokjes</li>
+      <li>1 blik kidneybonen (400g), uitgelekt</li>
+      <li>1 blik gehakte tomaten (400g) + 1 el tomatenpuree</li>
+      <li>1 tl komijn, 1 tl gerookt paprikapoeder, ½ tl chilipoeder, ½ tl oregano</li>
+      <li>1 el olijfolie, verse koriander, optioneel volle yoghurt</li>
+      <li>Zout en peper</li>
+    </ul>
+    <h3>Bereiding</h3>
+    <ol>
+      <li>Fruit ui in olijfolie 4–5 minuten glazig.</li>
+      <li>Voeg knoflook en paprika toe; bak 4–5 minuten mee.</li>
+      <li>Bak het gehakt rul (5–6 minuten).</li>
+      <li>Voeg kruiden + tomatenpuree toe; roer 1 minuut.</li>
+      <li>Voeg tomaten en kidneybonen toe; laat 10–12 minuten pruttelen.</li>
+      <li>Op smaak brengen, garneren met koriander en eventueel yoghurt.</li>
+    </ol>
+    <div class="tip"><strong>Tip:</strong> Verwarmt heerlijk op 80% in de magnetron (3–4 min, halverwege omroeren).</div>
+  </article>
+
+  <article class="day leftover" id="dinsdag">
+    <h2>Dinsdag — Restje Mexicaanse gehakt-pan</h2>
+    <div class="meta"><span class="badge">Verwarmbaar</span></div>
+    <p>Tweede portie afgesloten in de koelkast bewaren. Magnetron: 3–4 minuten op 80%, halverwege omroeren. Werk af met verse koriander.</p>
+  </article>
+
+  <article class="day" id="woensdag">
+    <h2>Woensdag — Thaise gele kip-curry met broccoli en paksoi</h2>
+    <div class="meta">
+      <span>⏱ 30 minuten</span>
+      <span>🎯 Makkelijk</span>
+      <span class="badge">Verwarmbaar</span>
+    </div>
+    <h3>Ingrediënten (2 porties)</h3>
+    <ul>
+      <li>350g kipfilet, in blokjes</li>
+      <li>1 broccoli (~400g), 2 stronkjes paksoi, 1 rode paprika</li>
+      <li>1 ui, 2 teentjes knoflook, 2 cm verse gember</li>
+      <li>2 el gele Thaise currypasta</li>
+      <li>1 blik kokosmelk (400ml)</li>
+      <li>1 el vissaus (of sojasaus), 1 tl honing, sap ½ limoen</li>
+      <li>1 el zonnebloem- of kokosolie</li>
+      <li>Verse koriander of Thaise basilicum</li>
+    </ul>
+    <h3>Bereiding</h3>
+    <ol>
+      <li>Fruit ui, knoflook en gember 3 minuten.</li>
+      <li>Roer currypasta erdoor; bak 1 minuut.</li>
+      <li>Bak kipblokjes 4–5 minuten dicht.</li>
+      <li>Giet kokosmelk erbij; laat 5 minuten pruttelen.</li>
+      <li>Voeg broccoli, paprika en wit van paksoi toe; 6–7 minuten meestoven.</li>
+      <li>Roer groen van paksoi erdoor (1–2 minuten).</li>
+      <li>Op smaak met vissaus, honing en limoen. Garneren met kruiden.</li>
+    </ol>
+    <div class="tip"><strong>Tip:</strong> Curries op kokosmelk worden de volgende dag nóg smaakvoller.</div>
+  </article>
+
+  <article class="day leftover" id="donderdag">
+    <h2>Donderdag — Restje Thaise kip-curry</h2>
+    <div class="meta"><span class="badge">Verwarmbaar</span></div>
+    <p>Magnetron: 4–5 minuten op 80%, halverwege omroeren. Maak af met verse limoen en koriander.</p>
+  </article>
+
+  <article class="day" id="vrijdag">
+    <h2>Vrijdag — Marokkaanse kikkererwten-tagine met aubergine en zoete aardappel</h2>
+    <div class="meta">
+      <span>⏱ 50 minuten</span>
+      <span>🎯 Gemiddeld</span>
+      <span class="badge">Verwarmbaar</span>
+      <span class="badge veg">Vegetarisch</span>
+    </div>
+    <h3>Ingrediënten (2 porties)</h3>
+    <ul>
+      <li>1 grote aubergine, 1 zoete aardappel (~300g)</li>
+      <li>1 blik kikkererwten (400g), 1 blik gehakte tomaten (400g)</li>
+      <li>1 ui, 3 teentjes knoflook, 2 cm verse gember</li>
+      <li>200ml groentebouillon, 1 el tomatenpuree</li>
+      <li>8 gedroogde abrikozen</li>
+      <li>1 tl komijn, 1 tl kaneel, 1 tl gerookt paprikapoeder, 1 tl Ras el Hanout</li>
+      <li>3 el olijfolie, sap ½ citroen, verse peterselie of koriander</li>
+      <li>Optioneel: 30g geroosterde amandelschaafsel of pijnboompitten</li>
+    </ul>
+    <h3>Bereiding</h3>
+    <ol>
+      <li>Oven op 200°C. Hussel aubergine + zoete aardappel met 2 el olie, zout, peper. Rooster 25 min.</li>
+      <li>Fruit ui in 1 el olie 5–6 minuten zacht.</li>
+      <li>Voeg knoflook, gember en alle kruiden toe; roer 1–2 minuten.</li>
+      <li>Tomatenpuree erdoor; bak 1 minuut. Voeg tomaten, bouillon, abrikozen toe; 10 minuten pruttelen.</li>
+      <li>Kikkererwten erbij; 5 minuten meestoven.</li>
+      <li>Geroosterde groente erdoorscheppen; 5 minuten doorwarmen.</li>
+      <li>Op smaak met citroen, zout, peper. Garneren met kruiden en noten.</li>
+    </ol>
+    <div class="tip"><strong>Tip:</strong> Klassiekers als deze worden alleen maar beter na een nacht koelkast. Magnetron: 4–5 min op 80%, afgedekt.</div>
+  </article>
+
+  <article class="day leftover" id="zaterdag">
+    <h2>Zaterdag — Restje Marokkaanse tagine</h2>
+    <div class="meta"><span class="badge">Verwarmbaar</span><span class="badge veg">Vegetarisch</span></div>
+    <p>Magnetron: 4–5 minuten op 80%, halverwege roeren. Werk af met verse peterselie en een scheutje olijfolie.</p>
+  </article>
+
+  <section class="shopping" id="boodschappen">
+    <h2>🛒 Boodschappenlijst</h2>
+    <p style="color: var(--muted); margin-top: 0;">Weekboodschappen voor 1 persoon · 6 dagen · 3 kookmomenten · 2 porties per maaltijd</p>
+
+    <h3>Vlees & gevogelte</h3>
+    <ul>
+      <li>300g rundergehakt (vers)</li>
+      <li>350g kipfilet</li>
+    </ul>
+
+    <h3>Zuivel & blik kokos</h3>
+    <ul>
+      <li>1 blik kokosmelk (400ml)</li>
+      <li>1 klein bakje volle yoghurt (200ml, optioneel)</li>
+    </ul>
+
+    <h3>Groente & fruit</h3>
+    <ul>
+      <li>3 grote uien</li>
+      <li>1 bol knoflook (~7 teentjes)</li>
+      <li>1 stukje verse gember (~5 cm)</li>
+      <li>3 paprika's (2 rood, 1 geel)</li>
+      <li>1 broccoli (~400g)</li>
+      <li>2 stronkjes paksoi</li>
+      <li>1 grote aubergine</li>
+      <li>1 zoete aardappel (~300g)</li>
+      <li>1 limoen, 1 citroen</li>
+      <li>1 bosje verse koriander</li>
+      <li>1 bosje verse peterselie (of extra koriander)</li>
+      <li>1 bosje Thaise basilicum (optioneel)</li>
+    </ul>
+
+    <h3>Houdbaar (blik, sauzen, droog)</h3>
+    <ul>
+      <li>1 blik kidneybonen (400g)</li>
+      <li>1 blik kikkererwten (400g)</li>
+      <li>3 blikken gehakte tomaten (400g per blik)</li>
+      <li>1 potje gele Thaise currypasta</li>
+      <li>1 fles vissaus of sojasaus <em>(mogelijk al in huis)</em></li>
+      <li>1 klein zakje gedroogde abrikozen (8 stuks)</li>
+      <li>Amandelschaafsel of pijnboompitten (optioneel)</li>
+      <li>1 groentebouillonblokje <em>(mogelijk al in huis)</em></li>
+      <li>1 tube tomatenpuree <em>(mogelijk al in huis)</em></li>
+    </ul>
+
+    <h3>Kruiden, specerijen & olie</h3>
+    <ul>
+      <li>Olijfolie <em>(mogelijk al in huis)</em></li>
+      <li>Zonnebloem- of kokosolie <em>(mogelijk al in huis)</em></li>
+      <li>Gemalen komijn <em>(mogelijk al in huis)</em></li>
+      <li>Gerookt paprikapoeder <em>(mogelijk al in huis)</em></li>
+      <li>Chilipoeder <em>(mogelijk al in huis)</em></li>
+      <li>Gedroogde oregano <em>(mogelijk al in huis)</em></li>
+      <li>Gemalen kaneel <em>(mogelijk al in huis)</em></li>
+      <li>Ras el Hanout (Marokkaanse kruidenmix)</li>
+      <li>Honing of rietsuiker <em>(mogelijk al in huis)</em></li>
+      <li>Zout en peper <em>(mogelijk al in huis)</em></li>
+    </ul>
+  </section>
+</main>
+<footer>Eet smakelijk! · Gegenereerd door Claude · 2 mei 2026</footer>
+</body>
+</html>
