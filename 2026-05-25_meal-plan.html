@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekmenu — week van 25 mei 2026</title>
+<style>
+  :root {
+    --bg: #faf9f6;
+    --surface: #ffffff;
+    --accent: #2d6a4f;
+    --accent2: #52b788;
+    --text: #1b1b1b;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --badge: #d8f3dc;
+    --badge-text: #1b4332;
+    --shadow: 0 2px 12px rgba(0,0,0,0.07);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+  header { background: var(--accent); color: white; padding: 2rem 1.5rem; text-align: center; }
+  header h1 { font-size: 1.8rem; font-weight: 700; letter-spacing: -0.5px; }
+  header p { margin-top: 0.4rem; opacity: 0.85; font-size: 0.95rem; }
+  nav { background: var(--surface); border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; padding: 0.75rem 1rem; position: sticky; top: 0; z-index: 10; box-shadow: var(--shadow); }
+  nav a { color: var(--accent); text-decoration: none; font-size: 0.85rem; font-weight: 600; padding: 0.3rem 0.7rem; border-radius: 20px; border: 1.5px solid var(--accent2); transition: all 0.15s; }
+  nav a:hover { background: var(--accent); color: white; }
+  main { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+  .day-card { background: var(--surface); border-radius: 12px; box-shadow: var(--shadow); margin-bottom: 2rem; overflow: hidden; border: 1px solid var(--border); }
+  .day-header { background: var(--accent); color: white; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+  .day-header h2 { font-size: 1.15rem; font-weight: 700; }
+  .day-meta { font-size: 0.8rem; opacity: 0.85; display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .badge { background: var(--badge); color: var(--badge-text); padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+  .day-body { padding: 1.25rem 1.5rem; }
+  .section-title { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 1rem 0 0.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.25rem; }
+  .section-title:first-child { margin-top: 0; }
+  ul.ingredients { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.3rem; }
+  ul.ingredients li { font-size: 0.92rem; padding: 0.25rem 0; display: flex; align-items: flex-start; gap: 0.4rem; }
+  ul.ingredients li::before { content: "•"; color: var(--accent2); font-weight: bold; flex-shrink: 0; }
+  ol.steps { padding-left: 1.2rem; }
+  ol.steps li { font-size: 0.93rem; margin-bottom: 0.5rem; padding-left: 0.3rem; }
+  .tip { background: #f0fdf4; border-left: 3px solid var(--accent2); padding: 0.75rem 1rem; border-radius: 0 8px 8px 0; margin-top: 1rem; font-size: 0.88rem; color: #166534; }
+  .tip strong { font-weight: 700; }
+  .leftovers-card { background: #f8fafc; border-radius: 12px; box-shadow: var(--shadow); margin-bottom: 2rem; overflow: hidden; border: 1px dashed var(--border); }
+  .leftovers-header { background: #64748b; color: white; padding: 0.75rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+  .leftovers-header h2 { font-size: 1rem; font-weight: 600; }
+  .leftovers-body { padding: 1rem 1.5rem; font-size: 0.9rem; color: var(--muted); font-style: italic; }
+  .shopping-section { background: var(--surface); border-radius: 12px; box-shadow: var(--shadow); padding: 1.5rem; border: 1px solid var(--border); margin-bottom: 2rem; }
+  .shopping-section h2 { font-size: 1.2rem; color: var(--accent); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent2); }
+  .shop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
+  .shop-cat h3 { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.4rem; }
+  .shop-cat ul { list-style: none; padding: 0; }
+  .shop-cat ul li { font-size: 0.88rem; padding: 0.2rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 0.4rem; }
+  .shop-cat ul li::before { content: "□"; color: var(--accent2); flex-shrink: 0; }
+  .muted-note { color: var(--muted); font-style: italic; font-size: 0.8rem; }
+  footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.82rem; }
+  @media (max-width: 600px) { .day-header { flex-direction: column; align-items: flex-start; } ul.ingredients { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>🥦 Weekmenu — week van 25 mei 2026</h1>
+  <p>1 persoon &middot; 2 porties per maaltijd &middot; Low-carb &middot; Seizoensgroenten</p>
+</header>
+<nav>
+  <a href="#maandag">Maandag</a>
+  <a href="#dinsdag">Dinsdag</a>
+  <a href="#woensdag">Woensdag</a>
+  <a href="#donderdag">Donderdag</a>
+  <a href="#vrijdag">Vrijdag</a>
+  <a href="#zaterdag">Zaterdag</a>
+  <a href="#boodschappen">Boodschappen</a>
+</nav>
+<main>
+
+<!-- MAANDAG -->
+<div class="day-card" id="maandag">
+  <div class="day-header">
+    <h2>🐟 Maandag 25 mei &mdash; Kabeljauw met mosterd-kruidenkorst en geroosterde groenten</h2>
+    <div class="day-meta">
+      <span>⏱ 25 min</span>
+      <span>🔥 Makkelijk</span>
+      <span class="badge">verwarmbaar</span>
+    </div>
+  </div>
+  <div class="day-body">
+    <div class="section-title">Ingrediënten (2 porties)</div>
+    <ul class="ingredients">
+      <li>400 g verse kabeljauwfilet (2 stukken)</li>
+      <li>300 g broccoli, in roosjes</li>
+      <li>200 g cherrytomaten</li>
+      <li>2 el Dijonmosterd</li>
+      <li>1 bosje verse peterselie, fijngehakt</li>
+      <li>1 citroen (rasp + sap)</li>
+      <li>2 teentjes knoflook, geperst</li>
+      <li>2 el olijfolie</li>
+      <li>Zout en versgemalen peper</li>
+    </ul>
+    <div class="section-title">Bereiding</div>
+    <ol class="steps">
+      <li>Verwarm de oven voor op 200 °C (hetelucht 180 °C).</li>
+      <li>Verdeel de broccoliroosjes en cherrytomaten over een bakplaat. Besprenkel met 1 el olijfolie, zout en peper. Zet in de oven voor 20 minuten.</li>
+      <li>Meng ondertussen de mosterd met de peterselie, knoflook, citroenrasp, een scheutje citroensap en 1 el olijfolie tot een smeuïge kruidenpasta.</li>
+      <li>Leg de kabeljauwstukken op een ingevette ovenschaal. Bestrijk royaal met de kruidenpasta.</li>
+      <li>Schuif de vis erin na 10 minuten (als de groenten al 10 min in de oven staan). Bak 12–14 minuten tot de vis net gaar is.</li>
+      <li>Serveer met de geroosterde groenten en een schijfje citroen.</li>
+    </ol>
+    <div class="tip"><strong>Tip:</strong> Bewaar de restjes afgedekt in de koelkast. Verwarm de volgende dag op 70% vermogen in de magnetron, afgedekt met een magnetronkap of vochtig keukenpapier, ca. 2–3 minuten.</div>
+  </div>
+</div>
+
+<!-- DINSDAG -->
+<div class="leftovers-card" id="dinsdag">
+  <div class="leftovers-header">
+    <h2>♻️ Dinsdag 26 mei &mdash; Restjes: Kabeljauw met mosterd-kruidenkorst</h2>
+    <div class="day-meta"><span class="badge" style="background:var(--badge);color:var(--badge-text);">verwarmbaar</span></div>
+  </div>
+  <div class="leftovers-body">Opwarmen in de magnetron op 70% vermogen, afgedekt, ca. 2–3 minuten. Voeg eventueel een scheutje citroensap toe voor extra frisheid.</div>
+</div>
+
+<!-- WOENSDAG -->
+<div class="day-card" id="woensdag">
+  <div class="day-header">
+    <h2>🌿 Woensdag 27 mei &mdash; Vegetarische kikkererwten-curry met spinazie en bloemkoolrijst</h2>
+    <div class="day-meta">
+      <span>⏱ 25 min</span>
+      <span>🔥 Makkelijk</span>
+      <span class="badge">verwarmbaar</span>
+      <span class="badge" style="background:#e0f2fe;color:#0c4a6e;">vegetarisch</span>
+    </div>
+  </div>
+  <div class="day-body">
+    <div class="section-title">Ingrediënten (2 porties)</div>
+    <ul class="ingredients">
+      <li>1 blik kikkererwten (400 g), uitgelekt</li>
+      <li>150 g verse babyspinazie</li>
+      <li>1 blik kokosmelk (400 ml)</li>
+      <li>1 blik tomatenblokjes (400 g)</li>
+      <li>1 ui, fijngesneden</li>
+      <li>3 teentjes knoflook, geperst</li>
+      <li>2 cm verse gember, geraspt</li>
+      <li>1 bloemkool (±600 g), in roosjes</li>
+      <li>2 tl Madras-kerriepoeder</li>
+      <li>1 tl kurkuma</li>
+      <li>1 tl komijnzaad</li>
+      <li>½ tl chilivlokken</li>
+      <li>1 el olijfolie of kokosolie</li>
+      <li>Verse koriander, voor garnering</li>
+      <li>Zout en peper</li>
+    </ul>
+    <div class="section-title">Bereiding</div>
+    <ol class="steps">
+      <li><strong>Bloemkoolrijst:</strong> Pulseer de bloemkoolroosjes in een keukenmachine tot korrelgrootte (of rasp grof). Bak 4–5 min in een droge hete pan al roerend tot licht goudkleurig. Op smaak brengen met zout. Zet apart.</li>
+      <li>Verhit olie in een brede pan. Bak de ui 3 min glazig. Voeg knoflook, gember en komijnzaad toe, bak 1 min mee.</li>
+      <li>Roer kerriepoeder, kurkuma en chilivlokken erdoor, bak 30 sec op laag vuur.</li>
+      <li>Voeg tomatenblokjes en kokosmelk toe. Breng aan de kook, laat 5 min zachtjes pruttelen.</li>
+      <li>Voeg kikkererwten toe en verwarm 3 min mee.</li>
+      <li>Roer spinazie erdoor tot geslonken (±1 min). Op smaak brengen met zout en peper.</li>
+      <li>Serveer op bloemkoolrijst en bestrooi met verse koriander.</li>
+    </ol>
+    <div class="tip"><strong>Tip:</strong> De curry wordt de volgende dag nog lekkerder. Verwarm op met een eetlepel extra water om indikken te voorkomen.</div>
+  </div>
+</div>
+
+<!-- DONDERDAG -->
+<div class="leftovers-card" id="donderdag">
+  <div class="leftovers-header">
+    <h2>♻️ Donderdag 28 mei &mdash; Restjes: Kikkererwten-curry met spinazie</h2>
+    <div class="day-meta"><span class="badge" style="background:var(--badge);color:var(--badge-text);">verwarmbaar</span></div>
+  </div>
+  <div class="leftovers-body">Opwarmen in de magnetron op 80% vermogen met een scheutje water, afgedekt, ca. 3 minuten. Bloemkoolrijst apart opwarmen.</div>
+</div>
+
+<!-- VRIJDAG -->
+<div class="day-card" id="vrijdag">
+  <div class="day-header">
+    <h2>🥩 Vrijdag 29 mei &mdash; Koreaanse rundvleesreepjes (Bulgogi-stijl) met broccoli en bloemkoolrijst</h2>
+    <div class="day-meta">
+      <span>⏱ 40 min (incl. marineren)</span>
+      <span>🔥 Gemiddeld</span>
+      <span class="badge">verwarmbaar</span>
+    </div>
+  </div>
+  <div class="day-body">
+    <div class="section-title">Ingrediënten (2 porties)</div>
+    <ul class="ingredients">
+      <li>400 g runderreepjes (rosbief of entrecote)</li>
+      <li>300 g broccoli, in kleine roosjes</li>
+      <li>100 g shiitake- of kastanjechampignons, in plakken</li>
+      <li>1 bloemkool (±600 g), in roosjes</li>
+      <li>3 el tamari of sojasaus</li>
+      <li>1 el sesamolie</li>
+      <li>1 el rijstazijn</li>
+      <li>1 tl honing of ahornsiroop</li>
+      <li>3 teentjes knoflook, geperst</li>
+      <li>2 cm verse gember, geraspt</li>
+      <li>2 bosuitjes, in ringen</li>
+      <li>1 el sesamzaad</li>
+      <li>1 el neutrale olie</li>
+      <li>Chilisaus of sriracha, naar smaak</li>
+    </ul>
+    <div class="section-title">Bereiding</div>
+    <ol class="steps">
+      <li><strong>Marinade:</strong> Meng tamari, sesamolie, rijstazijn, honing, knoflook en gember. Voeg de runderreepjes toe en laat minstens 20 min marineren bij kamertemperatuur.</li>
+      <li><strong>Bloemkoolrijst:</strong> Pulseer in keukenmachine tot korrelgrootte. Bak droog in hete pan 4–5 min al roerend tot goudkleurig. Op smaak brengen met zout. Zet apart.</li>
+      <li>Verhit een wok of grote koekenpan gloeiend heet. Voeg neutrale olie toe.</li>
+      <li>Bak de runderreepjes in kleine porties 1–2 min bruin (niet overvol — anders stoomt het vlees). Haal uit de pan.</li>
+      <li>Bak broccoli en champignons in dezelfde pan 3–4 min op hoog vuur al roerend.</li>
+      <li>Doe vlees terug erin, voeg een scheut marinade toe, bak nog 1 min op hoog vuur.</li>
+      <li>Serveer op bloemkoolrijst. Bestrooi met bosuitjes en sesamzaad, voeg sriracha toe naar smaak.</li>
+    </ol>
+    <div class="tip"><strong>Tip:</strong> Vlees en groenten opwarmen op 80% vermogen, afgedekt, ca. 2–3 min. Bloemkoolrijst apart opwarmen. Een scheutje extra tamari bij het opwarmen geeft extra smaak.</div>
+  </div>
+</div>
+
+<!-- ZATERDAG -->
+<div class="leftovers-card" id="zaterdag">
+  <div class="leftovers-header">
+    <h2>♻️ Zaterdag 30 mei &mdash; Restjes: Koreaanse rundvleesreepjes</h2>
+    <div class="day-meta"><span class="badge" style="background:var(--badge);color:var(--badge-text);">verwarmbaar</span></div>
+  </div>
+  <div class="leftovers-body">Opwarmen in de magnetron op 80% vermogen, afgedekt, ca. 2–3 minuten. Bloemkoolrijst apart opwarmen. Eventueel een scheutje sriracha erover.</div>
+</div>
+
+<!-- BOODSCHAPPENLIJST -->
+<div class="shopping-section" id="boodschappen">
+  <h2>🛒 Boodschappenlijst — week van 25 mei 2026</h2>
+  <p style="color:var(--muted);font-size:0.85rem;margin-bottom:1rem;">3 maaltijden &middot; 2 porties per maaltijd &middot; Items met <em>(mogelijk al in huis)</em> hoef je wellicht niet te kopen.</p>
+  <div class="shop-grid">
+    <div class="shop-cat">
+      <h3>🥩 Vlees, vis &amp; vleeswaren</h3>
+      <ul>
+        <li>400 g verse kabeljauwfilet (zo vers mogelijk)</li>
+        <li>400 g runderreepjes (rosbief of entrecote)</li>
+      </ul>
+    </div>
+    <div class="shop-cat">
+      <h3>🥦 Groente &amp; fruit</h3>
+      <ul>
+        <li>2 kroppen broccoli (300 g per stuk)</li>
+        <li>2 bloemkolen (±600 g per stuk)</li>
+        <li>200 g cherrytomaten</li>
+        <li>150 g verse babyspinazie</li>
+        <li>100 g shiitake- of kastanjechampignons</li>
+        <li>1 ui</li>
+        <li>1 bol knoflook (8 teentjes nodig)</li>
+        <li>1 stuk verse gember (±6 cm)</li>
+        <li>2 bosuitjes</li>
+        <li>1 citroen</li>
+        <li>1 bosje verse peterselie</li>
+        <li>1 bosje verse koriander</li>
+      </ul>
+    </div>
+    <div class="shop-cat">
+      <h3>🥫 Houdbaar</h3>
+      <ul>
+        <li>1 blik kikkererwten (400 g)</li>
+        <li>1 blik kokosmelk (400 ml)</li>
+        <li>1 blik tomatenblokjes (400 g)</li>
+        <li>Tamari of sojasaus (flesje)</li>
+        <li>Rijstazijn (flesje)</li>
+        <li>Chilisaus of sriracha</li>
+      </ul>
+    </div>
+    <div class="shop-cat">
+      <h3>🌿 Kruiden, specerijen &amp; olie</h3>
+      <ul>
+        <li>Sesamolie (klein flesje)</li>
+        <li>Sesamzaad (zakje)</li>
+        <li>Dijonmosterd <span class="muted-note">(mogelijk al in huis)</span></li>
+        <li>Madras-kerriepoeder <span class="muted-note">(mogelijk al in huis)</span></li>
+        <li>Kurkuma <span class="muted-note">(mogelijk al in huis)</span></li>
+        <li>Komijnzaad <span class="muted-note">(mogelijk al in huis)</span></li>
+        <li>Chilivlokken <span class="muted-note">(mogelijk al in huis)</span></li>
+        <li>Neutrale olie <span class="muted-note">(mogelijk al in huis)</span></li>
+        <li>Olijfolie <span class="muted-note">(mogelijk al in huis)</span></li>
+        <li>Zout &amp; peper <span class="muted-note">(mogelijk al in huis)</span></li>
+      </ul>
+    </div>
+    <div class="shop-cat">
+      <h3>🍯 Overig</h3>
+      <ul>
+        <li>Honing of ahornsiroop <span class="muted-note">(mogelijk al in huis)</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</main>
+<footer>Gegenereerd door Claude &middot; Weekmenu 25–30 mei 2026 &middot; Low-carb &middot; Seizoensgroenten</footer>
+</body>
+</html>
