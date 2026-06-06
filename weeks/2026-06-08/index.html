@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weekmenu — week van 8 juni 2026</title>
+<style>
+  :root {
+    --bg: #fafaf7;
+    --card: #ffffff;
+    --ink: #1f2421;
+    --muted: #6b7066;
+    --accent: #4f7a3c;
+    --accent-soft: #eef3ea;
+    --border: #e4e1d8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.55;
+  }
+  header {
+    background: var(--accent);
+    color: #fff;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+  }
+  header h1 { margin: 0; font-size: 2rem; letter-spacing: -0.01em; }
+  header p { margin: 0.5rem 0 0; opacity: 0.9; }
+  main {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+  .tabs {
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .tab {
+    background: none;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    color: var(--muted);
+    font-size: 1rem;
+    border-bottom: 2px solid transparent;
+    font-weight: 500;
+  }
+  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  .day, .category {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .day h2 {
+    margin: 0 0 0.25rem;
+    font-size: 1.2rem;
+    color: var(--accent);
+  }
+  .day .meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+  .day h3, .category h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1rem;
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .category h3 {
+    color: var(--accent);
+    margin-top: 0;
+    font-size: 1.05rem;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .day ul, .day ol, .category ul { padding-left: 1.25rem; margin: 0; }
+  .day li, .category li { margin-bottom: 0.3rem; }
+  .tip {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    padding: 0.6rem 0.9rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+  }
+  .badge {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.75rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 99px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+  .note { color: var(--muted); font-style: italic; font-size: 0.9rem; }
+  footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 1.5rem; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th, td { padding: 0.6rem 0.9rem; text-align: left; border-bottom: 1px solid var(--border); }
+  th { background: var(--accent-soft); color: var(--accent); }
+  tr:last-child td { border-bottom: none; }
+  .intro {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Weekmenu — week van 8 juni 2026</h1>
+  <p>1 persoon · 2 porties per maaltijd · 3 kookmomenten · 6 avondmaaltijden</p>
+</header>
+<main>
+  <div class="tabs">
+    <button class="tab active" data-panel="menu">Weekmenu</button>
+    <button class="tab" data-panel="shopping">Boodschappenlijst</button>
+    <button class="tab" data-panel="overview">Overzicht</button>
+  </div>
+
+  <section class="panel active" id="menu">
+    <div class="intro">
+      <strong>Thema van de week:</strong> een reis door drie keukens — Thais op maandag, Provençaals (Frans-mediterraan) midweek en Indiaas-vegetarisch in het weekend. Veel groen, weinig zetmeel, alles uitstekend opwarmbaar in de magnetron. Juni in Nederland betekent volop verse courgette, aubergine, sperziebonen, spinazie en kruiden.
+    </div>
+
+    <div class="day">
+      <h2>Maandag — Thaise rundvlees-basilicum (pad krapow) met sperziebonen en bloemkoolrijst <span class="badge">verwarmbaar</span></h2>
+      <div class="meta">25 minuten · Makkelijk</div>
+
+      <h3>Ingrediënten (2 porties)</h3>
+      <ul>
+        <li>400 g rundergehakt (mager) of biefstukreepjes, fijngehakt</li>
+        <li>300 g sperziebonen, in stukjes van 3 cm</li>
+        <li>1 hele bloemkool (ca. 600 g) — voor bloemkoolrijst</li>
+        <li>2 sjalotjes of 1 kleine ui, fijngesnipperd</li>
+        <li>4 teentjes knoflook, fijngehakt</li>
+        <li>2 rode chilipepers (bird's eye), fijngehakt</li>
+        <li>1 grote bos Thaise basilicum (ca. 30 g blaadjes)</li>
+        <li>2 el oestersaus · 2 el lichte sojasaus · 1 el vissaus · 1 tl bruine suiker</li>
+        <li>1 el neutrale olie · 1 limoen</li>
+        <li>Optioneel: 2 eieren voor een spiegelei erbovenop</li>
+      </ul>
+
+      <h3>Bereiding</h3>
+      <ol>
+        <li><strong>Bloemkoolrijst:</strong> snijd in roosjes, pulseer in keukenmachine tot rijstkorrel. Bak droog in wok 5–6 min tot licht goudkleurig. Op smaak met zout.</li>
+        <li>Meng oester-, soja- en vissaus met suiker in een kommetje.</li>
+        <li>Verhit olie in wok op hoog vuur. Bak knoflook, chili en sjalot 30 sec — niet bruin.</li>
+        <li>Voeg gehakt toe, bak 3–4 min, druk los.</li>
+        <li>Voeg sperziebonen toe, bak 3 min mee tot beetgaar maar knapperig.</li>
+        <li>Schenk saus erbij, 1 min inkoken. Van het vuur halen, basilicumblaadjes erdoor (mogen net slinken).</li>
+        <li>Optioneel: bak een spiegelei. Serveer op bloemkoolrijst met partje limoen en het ei erbovenop.</li>
+      </ol>
+
+      <div class="tip"><strong>Tip:</strong> Bewaar vlees-bonenmengsel en bloemkoolrijst gescheiden. Dag 2: bloemkoolrijst 2 min in magnetron met theelepel water; vlees-bonen 2 min op 80% afgedekt. Sla het ei over of bak een vers ei.</div>
+    </div>
+
+    <div class="day">
+      <h2>Dinsdag — Restjes pad krapow met bloemkoolrijst <span class="badge">verwarmbaar</span></h2>
+      <div class="meta">5 minuten · Makkelijk</div>
+      <p>Bloemkoolrijst 2 min in magnetron (met scheutje water), vlees-bonenmengsel 2 min op 80%, afgedekt. Verse limoen en wat verse basilicum of koriander voor frisheid.</p>
+    </div>
+
+    <div class="day">
+      <h2>Woensdag — Geroosterde kip Provençaal met aubergine, courgette en witte bonen <span class="badge">verwarmbaar</span></h2>
+      <div class="meta">45 minuten (waarvan ~10 actief) · Makkelijk</div>
+
+      <h3>Ingrediënten (2 porties)</h3>
+      <ul>
+        <li>4 kippendijfilets met vel (ca. 500 g)</li>
+        <li>1 grote aubergine, in blokjes · 1 grote courgette, in halve maantjes</li>
+        <li>1 blik witte bonen (cannellini, 400 g), uitgelekt</li>
+        <li>250 g cherrytomaten, gehalveerd · 1 rode ui, in dikke ringen</li>
+        <li>4 teentjes knoflook, platgeslagen · 1 citroen (rasp + sap)</li>
+        <li>3 el olijfolie · 2 tl Provençaalse kruiden · verse tijm + rozemarijn</li>
+        <li>60 g zwarte olijven · 2 el verse peterselie · zout, peper</li>
+      </ul>
+
+      <h3>Bereiding</h3>
+      <ol>
+        <li>Oven op 200 °C. Meng aubergine, courgette, ui, tomaten en knoflook met 2 el olie, helft van de kruiden, zout en peper in ovenschaal.</li>
+        <li>Wrijf kip in met 1 el olie, citroenrasp en de rest van de kruiden. Leg met velkant boven op de groenten.</li>
+        <li>Rooster 30 min — vel goudbruin, groenten karameliseren.</li>
+        <li>Schep witte bonen en olijven erbij (rondom de kip). Knijp citroensap erover, strooi verse tijm/rozemarijn. Zet nog 10–12 min in de oven.</li>
+        <li>Check kerntemperatuur kip (75 °C). Laat 5 min rusten. Strooi verse peterselie erover en serveer met pannensap.</li>
+      </ol>
+
+      <div class="tip"><strong>Tip:</strong> Verdeel restjes plat in schaal voor gelijkmatig opwarmen. Magnetron 80%, afgedekt, 3 min. Voor knapperig vel: 2 min onder de grill ná de magnetron. Een van de betere opwarmgerechten.</div>
+    </div>
+
+    <div class="day">
+      <h2>Donderdag — Restjes Provençaalse kip met geroosterde groenten <span class="badge">verwarmbaar</span></h2>
+      <div class="meta">5 minuten · Makkelijk</div>
+      <p>Magnetron 80% afgedekt, ca. 3 min. Knapperig vel terug onder grill 2 min. Verse peterselie en een scheutje van je beste olijfolie maken het af.</p>
+    </div>
+
+    <div class="day">
+      <h2>Vrijdag — Indiase rode linzen-dahl met geroosterde bloemkool, spinazie en cashewnoten <span class="badge">verwarmbaar</span></h2>
+      <div class="meta">40 minuten (waarvan ~15 actief) · Gemiddeld</div>
+
+      <h3>Ingrediënten (2 porties)</h3>
+      <ul>
+        <li>250 g rode linzen (gedroogd) · 1 hele bloemkool (ca. 600 g) in roosjes</li>
+        <li>200 g verse babyspinazie · 1 ui, fijngesnipperd</li>
+        <li>3 teentjes knoflook · 3 cm verse gember, geraspt</li>
+        <li>1 blik tomatenblokjes (400 g) · 200 ml light kokosmelk · 600 ml groentebouillon</li>
+        <li>2 tl garam masala · 1 tl komijn · 1 tl kurkuma · 1 tl gemalen koriander · ½ tl chilivlokken · 1 tl mosterdzaad</li>
+        <li>1 tl gerookt paprikapoeder (voor bloemkool) · 50 g cashewnoten, grof gehakt</li>
+        <li>1 limoen (sap) · grote handvol verse koriander · 2 el kokos- of olijfolie · zout</li>
+      </ul>
+
+      <h3>Bereiding</h3>
+      <ol>
+        <li>Oven 220 °C. Bloemkool met 1 el olie, paprikapoeder, zout en peper op bakplaat. Rooster 20–25 min tot goudbruin.</li>
+        <li><strong>Dahl:</strong> verhit 1 el olie, voeg mosterdzaad en komijn toe, wacht tot mosterdzaad knettert (30 sec).</li>
+        <li>Ui 3 min glazig bakken. Knoflook en gember 1 min mee. Garam masala, kurkuma, koriander, chilivlokken 30 sec mee.</li>
+        <li>Tomatenblokjes erbij, 2 min pruttelen.</li>
+        <li>Linzen spoelen tot helder water. Erbij met bouillon en kokosmelk. Aan de kook, draai laag, 20 min zachtjes pruttelen, regelmatig roeren tot linzen uit elkaar vallen.</li>
+        <li>Rooster cashewnoten droog in pan, 2–3 min lichtbruin.</li>
+        <li>Spinazie laatste 2 min door de dahl tot geslonken. Limoensap erover. Op smaak met zout.</li>
+        <li>Serveer dahl met geroosterde bloemkool, cashewnoten en verse koriander erbovenop.</li>
+      </ol>
+
+      <div class="tip"><strong>Tip:</strong> Dahl wordt dag 2 nog lekkerder. Bloemkool apart bewaren — heet hem op in een hete pan of 2 min op 220 °C in de oven (of luchtfriteuse). Dahl 3 min magnetron op 80% met scheutje water. Cashewnoten en koriander pas op het bord erbij.</div>
+    </div>
+
+    <div class="day">
+      <h2>Zaterdag — Restjes dahl met geroosterde bloemkool en cashewnoten <span class="badge">verwarmbaar</span></h2>
+      <div class="meta">5 minuten · Makkelijk</div>
+      <p>Dahl 3 min magnetron op 80% met scheutje water. Bloemkool kort in hete pan opbakken of 2 min onder de grill. Cashewnoten, verse koriander en limoen erover.</p>
+    </div>
+  </section>
+
+  <section class="panel" id="shopping">
+    <p class="note">Weekboodschappen voor 1 persoon · 6 maaltijden (3 kookmomenten + 3 restjesavonden) · 2 porties per maaltijd</p>
+
+    <div class="category">
+      <h3>Vlees, vis & vleeswaren</h3>
+      <ul>
+        <li>400 g rundergehakt (mager) — of biefstukreepjes voor de pad krapow</li>
+        <li>500 g kippendijfilet met vel (ca. 4 stuks)</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h3>Zuivel & eieren</h3>
+      <ul>
+        <li>1 klein blik kokosmelk (light, 400 ml) — slechts 200 ml nodig, rest is bonus</li>
+        <li>2 eieren <span class="note">(optioneel, voor spiegelei bij de pad krapow)</span></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h3>Groente & fruit</h3>
+      <ul>
+        <li>2 bloemkolen (totaal ca. 1,2 kg)</li>
+        <li>300 g sperziebonen (vers, jong)</li>
+        <li>1 grote aubergine · 1 grote courgette</li>
+        <li>250 g cherrytomaten · 200 g verse babyspinazie</li>
+        <li>1 rode ui · 1 gele ui · 2 sjalotjes</li>
+        <li>2 limoenen · 1 citroen</li>
+        <li>2 rode chilipepers (bird's eye)</li>
+        <li>1 stukje verse gember (ca. 5 cm)</li>
+        <li>2 knoflookbollen (ca. 11 teentjes nodig)</li>
+        <li>1 grote bos Thaise basilicum</li>
+        <li>1 bos verse peterselie · 1 grote bos verse koriander</li>
+        <li>1 bos verse tijm · 1 bos verse rozemarijn</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h3>Houdbaar (blik, sauzen, bouillon, noten)</h3>
+      <ul>
+        <li>250 g rode linzen (gedroogd)</li>
+        <li>1 blik witte bonen (cannellini, 400 g)</li>
+        <li>1 blik tomatenblokjes (400 g)</li>
+        <li>1 pot zwarte olijven zonder pit (60 g, Kalamata of Niçoise)</li>
+        <li>1 fles oestersaus (klein) · 1 flesje vissaus (nam pla)</li>
+        <li>1 fles lichte sojasaus <span class="note">(mogelijk al in huis)</span></li>
+        <li>50 g cashewnoten (ongezouten)</li>
+        <li>1 pakje groentebouillonblokjes <span class="note">(mogelijk al in huis)</span></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h3>Kruiden, specerijen & olie</h3>
+      <ul>
+        <li>Olijfolie extra vergine <span class="note">(mogelijk al in huis)</span></li>
+        <li>Neutrale olie (zonnebloem/arachide) <span class="note">(mogelijk al in huis)</span></li>
+        <li>Kokosolie <span class="note">(optioneel)</span></li>
+        <li>Garam masala · Gemalen koriander · Bruin mosterdzaad</li>
+        <li>Gemalen komijn, kurkuma, chilivlokken, gerookt paprikapoeder, Provençaalse kruiden, bruine suiker <span class="note">(mogelijk al in huis)</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="panel" id="overview">
+    <table>
+      <thead>
+        <tr><th>Dag</th><th>Eiwit</th><th>Koolhydraat</th><th>Cuisine</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Ma/Di</td><td>Rundergehakt</td><td>Bloemkoolrijst (laag)</td><td>Thais</td></tr>
+        <tr><td>Wo/Do</td><td>Kippendij</td><td>Witte bonen (medium-laag)</td><td>Frans / Provençaals</td></tr>
+        <tr><td>Vr/Za</td><td>Rode linzen + cashew (vegetarisch)</td><td>Linzen + geroosterde bloemkool (laag)</td><td>Indiaas</td></tr>
+      </tbody>
+    </table>
+    <p class="note" style="margin-top:1.5rem;"><strong>Seizoensproducten deze week:</strong> verse sperziebonen, courgette, aubergine, spinazie, bloemkool, verse basilicum, peterselie, koriander, tijm en rozemarijn.</p>
+  </section>
+</main>
+
+<footer>Gegenereerd door Claude · meal-planner skill</footer>
+
+<script>
+  document.querySelectorAll('.tab').forEach(t => {
+    t.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(x => x.classList.remove('active'));
+      t.classList.add('active');
+      document.getElementById(t.dataset.panel).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
