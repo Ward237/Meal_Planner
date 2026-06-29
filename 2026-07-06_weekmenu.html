@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weekmenu — week van 6 juli 2026</title>
+<style>
+  :root {
+    --bg: #fafaf7;
+    --card: #ffffff;
+    --ink: #1f2421;
+    --muted: #6b7066;
+    --accent: #4f7a3c;
+    --accent-soft: #eef3ea;
+    --border: #e4e1d8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.55;
+  }
+  header {
+    background: var(--accent);
+    color: #fff;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+  }
+  header h1 { margin: 0; font-size: 2rem; letter-spacing: -0.01em; }
+  header p { margin: 0.5rem 0 0; opacity: 0.9; }
+  main {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+  .tabs {
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1.5rem;
+  }
+  .tab {
+    background: none;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    color: var(--muted);
+    font-size: 1rem;
+    border-bottom: 2px solid transparent;
+    font-weight: 500;
+  }
+  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  .day {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .day h2 {
+    margin: 0 0 0.25rem;
+    font-size: 1.2rem;
+    color: var(--accent);
+  }
+  .day .meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+  .day h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1rem;
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .day ul, .day ol { padding-left: 1.25rem; }
+  .day li { margin-bottom: 0.3rem; }
+  .tip {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    padding: 0.6rem 0.9rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+  }
+  .badge {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.75rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 99px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+  .badge-time {
+    display: inline-block;
+    background: #fff8e1;
+    color: #8a6900;
+    font-size: 0.75rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 99px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+  .category {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .category h3 {
+    margin: 0 0 0.5rem;
+    color: var(--accent);
+    font-size: 1.05rem;
+  }
+  .category ul { margin: 0; padding-left: 1.25rem; }
+  .category li { margin-bottom: 0.2rem; }
+  .note {
+    color: var(--muted);
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    padding: 1.5rem;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>🍽️ Weekmenu</h1>
+  <p>Week van 6 juli 2026 &middot; 3 maaltijden &middot; 2 porties per kookbeurt &middot; Low-carb</p>
+</header>
+<main>
+  <div class="tabs">
+    <button class="tab active" onclick="show('menu',this)">🥘 Weekmenu</button>
+    <button class="tab" onclick="show('boodschappen',this)">🛒 Boodschappen</button>
+  </div>
+
+  <!-- WEEKMENU PANEL -->
+  <div id="menu" class="panel active">
+
+    <div class="day">
+      <h2>Maandag &amp; Dinsdag — Kabeljauw met mosterd-kruidenkorst
+        <span class="badge">🐟 Vis</span>
+        <span class="badge">Europees</span>
+        <span class="badge-time">⏱ 25 min</span>
+        <span class="badge">verwarmbaar</span>
+      </h2>
+      <div class="meta">Spinazie &middot; Cherrytomaten &middot; Mosterd-kruidenkorst</div>
+
+      <h3>Ingrediënten (2 porties)</h3>
+      <ul>
+        <li>400 g kabeljauwfilet (vers)</li>
+        <li>200 g verse spinazie</li>
+        <li>250 g cherrytomaten</li>
+        <li>2 el grove mosterd</li>
+        <li>2 el gehakte verse peterselie</li>
+        <li>1 el gehakte verse dille</li>
+        <li>3 teentjes knoflook</li>
+        <li>2 el olijfolie</li>
+        <li>½ citroen (rasp + sap)</li>
+        <li>Zout &amp; versgemalen peper</li>
+      </ul>
+
+      <h3>Bereiding</h3>
+      <ol>
+        <li>Verwarm de oven voor op <strong>200 °C</strong> (hetelucht 185 °C).</li>
+        <li>Meng mosterd, peterselie, dille, 2 geperste knoflookteentjes, 1 el olijfolie en citroenschil tot een pasta.</li>
+        <li>Dep de kabeljauwfilets droog, leg op bakpapier en bestrijk royaal met de pasta.</li>
+        <li>Bak <strong>15–18 minuten</strong> tot de vis gaar is (vliest makkelijk uit elkaar).</li>
+        <li>Verhit resterende olijfolie in een pan, fruit het laatste knoflookteentje 30 sec.</li>
+        <li>Voeg spinazie toe, laat 2–3 minuten slinken. Op smaak met zout, peper en citroensap.</li>
+        <li>Halveer cherrytomaten, voeg toe en warm 1–2 minuten mee.</li>
+        <li>Leg de kabeljauw op de spinazie-tomatenbasis en serveer.</li>
+      </ol>
+      <div class="tip">💡 <strong>Opwarmen:</strong> Magnetron 600 W, 2–3 min afgedekt. Voeg een scheutje water toe om uitdrogen te voorkomen.</div>
+    </div>
+
+    <div class="day">
+      <h2>Woensdag &amp; Donderdag — Thaise kip-wokschotel met broccoli en pak choi
+        <span class="badge">🍗 Kip</span>
+        <span class="badge">Thais</span>
+        <span class="badge-time">⏱ 25 min</span>
+        <span class="badge">verwarmbaar</span>
+      </h2>
+      <div class="meta">Broccoli &middot; Pak choi &middot; Gember-sojasaus &middot; Sesamolie</div>
+
+      <h3>Ingrediënten (2 porties)</h3>
+      <ul>
+        <li>400 g kipfilet, in dunne reepjes</li>
+        <li>1 stronk broccoli (ca. 300 g), in roosjes</li>
+        <li>200 g pak choi, grof gesneden</li>
+        <li>3 teentjes knoflook, fijngehakt</li>
+        <li>2 cm verse gember, geraspt</li>
+        <li>1 rode peper, fijngehakt</li>
+        <li>2 el tamari of sojasaus</li>
+        <li>1 el vissaus</li>
+        <li>1 tl sesamolie</li>
+        <li>1 el kokosvet of neutrale olie</li>
+        <li>2 bosuitjes, in ringetjes</li>
+        <li>Sap van ½ limoen</li>
+      </ul>
+
+      <h3>Bereiding</h3>
+      <ol>
+        <li>Verhit een wok op <strong>hoog vuur</strong>. Voeg de olie toe.</li>
+        <li>Bak de kipreepjes <strong>4–5 minuten</strong> rondom goudbruin. Zet apart.</li>
+        <li>Bak knoflook, gember en rode peper <strong>30 seconden</strong> tot geurig.</li>
+        <li>Voeg broccoli toe, roerbak <strong>3 minuten</strong>.</li>
+        <li>Voeg pak choi toe, roerbak nog <strong>2 minuten</strong>.</li>
+        <li>Voeg kip terug, schenk tamari en vissaus erover, meng goed.</li>
+        <li>Van het vuur af: sesamolie en limoensap erover. Garneer met bosui.</li>
+      </ol>
+      <div class="tip">💡 <strong>Opwarmen:</strong> Magnetron 700 W, 2–3 min, afgedekt. Druppel extra sojasaus of water bij.</div>
+    </div>
+
+    <div class="day">
+      <h2>Vrijdag &amp; Zaterdag — Mexicaanse rundergehakt-paprikaschotel met zwarte bonen
+        <span class="badge">🥩 Rund</span>
+        <span class="badge">Mexicaans</span>
+        <span class="badge-time">⏱ 50 min</span>
+        <span class="badge">verwarmbaar</span>
+      </h2>
+      <div class="meta">Zwarte bonen &middot; Paprika &middot; Courgette &middot; Tomaat &middot; Koriander</div>
+
+      <h3>Ingrediënten (2 porties)</h3>
+      <ul>
+        <li>400 g rundergehakt</li>
+        <li>1 blik zwarte bonen (400 g), uitgelekt</li>
+        <li>2 rode paprika's, in blokjes</li>
+        <li>1 courgette, in halve maantjes</li>
+        <li>1 blik tomatenblokjes (400 g)</li>
+        <li>1 ui, fijngesneden</li>
+        <li>3 teentjes knoflook, fijngehakt</li>
+        <li>1½ tl komijn (gemalen)</li>
+        <li>1½ tl gerookt paprikapoeder</li>
+        <li>1 tl chilipoeder</li>
+        <li>1 el olijfolie</li>
+        <li>Zout &amp; peper</li>
+        <li>Handje verse koriander</li>
+        <li>1 limoen (sap)</li>
+        <li>1 avocado (optioneel)</li>
+      </ul>
+
+      <h3>Bereiding</h3>
+      <ol>
+        <li>Verwarm de oven voor op <strong>190 °C</strong>.</li>
+        <li>Verhit olijfolie in een ovenvaste pan. Fruit ui <strong>3 minuten</strong> glazig, voeg knoflook toe, nog 1 minuut.</li>
+        <li>Voeg gehakt toe, bak al roerend bruin in <strong>4–5 minuten</strong>.</li>
+        <li>Strooi komijn, paprikapoeder en chilipoeder over het vlees, roer <strong>1 minuut</strong> mee.</li>
+        <li>Voeg paprika en courgette toe, <strong>3 minuten</strong> meebakken.</li>
+        <li>Roer tomatenblokjes en zwarte bonen erdoor. Op smaak met zout en peper.</li>
+        <li>Dek af en zet <strong>30 minuten</strong> in de oven. Laatste 5 minuten zonder deksel.</li>
+        <li>Bestrooi met verse koriander, scheutje limoensap. Serveer met plakjes avocado.</li>
+      </ol>
+      <div class="tip">💡 <strong>Opwarmen:</strong> Magnetron 700 W, 3–4 min, roer halverwege. Avocado pas na het opwarmen toevoegen.</div>
+    </div>
+
+  </div><!-- /menu panel -->
+
+  <!-- BOODSCHAPPEN PANEL -->
+  <div id="boodschappen" class="panel">
+
+    <div class="category">
+      <h3>🥩 Vlees, vis &amp; vleeswaren</h3>
+      <ul>
+        <li>400 g kabeljauwfilet (vers)</li>
+        <li>400 g kipfilet</li>
+        <li>400 g rundergehakt</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h3>🥦 Groente &amp; fruit</h3>
+      <ul>
+        <li>200 g verse spinazie</li>
+        <li>250 g cherrytomaten</li>
+        <li>1 stronk broccoli (ca. 300 g)</li>
+        <li>200 g pak choi</li>
+        <li>2 rode paprika's</li>
+        <li>1 courgette</li>
+        <li>1 ui</li>
+        <li>1 rode peper</li>
+        <li>2 bosuitjes</li>
+        <li>2 cm verse gember</li>
+        <li>1 bol knoflook <span class="note">(mogelijk al in huis)</span></li>
+        <li>1 citroen</li>
+        <li>2 limoenen</li>
+        <li>1 avocado <span class="note">(optioneel)</span></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h3>🌿 Verse kruiden</h3>
+      <ul>
+        <li>Bosje verse peterselie</li>
+        <li>Bosje verse dille</li>
+        <li>Bosje verse koriander</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h3>🥫 Houdbaar (blik, sauzen)</h3>
+      <ul>
+        <li>1 blik zwarte bonen (400 g)</li>
+        <li>1 blik tomatenblokjes (400 g)</li>
+        <li>Grove mosterd <span class="note">(mogelijk al in huis)</span></li>
+        <li>Tamari of sojasaus (fles)</li>
+        <li>Vissaus (fles)</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h3>🫙 Kruiden, specerijen &amp; olie</h3>
+      <ul>
+        <li>Komijn gemalen <span class="note">(mogelijk al in huis)</span></li>
+        <li>Gerookt paprikapoeder <span class="note">(mogelijk al in huis)</span></li>
+        <li>Chilipoeder <span class="note">(mogelijk al in huis)</span></li>
+        <li>Sesamolie (klein flesje)</li>
+        <li>Olijfolie <span class="note">(mogelijk al in huis)</span></li>
+        <li>Zout &amp; versgemalen peper <span class="note">(mogelijk al in huis)</span></li>
+      </ul>
+    </div>
+
+  </div><!-- /boodschappen panel -->
+
+</main>
+<footer>Gegenereerd door Claude &middot; Weekmenu 6 juli 2026</footer>
+
+<script>
+function show(panel, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(panel).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
