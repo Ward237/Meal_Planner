@@ -1,189 +1,451 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recepten — Week van 13 april 2026</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Georgia, serif; background: #faf9f6; color: #1a1a1a; line-height: 1.8; }
-    .wrapper { max-width: 820px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
-    .back { font-family: Arial, sans-serif; font-size: 0.82rem; color: #888; text-decoration: none; display: inline-block; margin-bottom: 2rem; }
-    .back:hover { color: #1a1a1a; }
-    header { border-bottom: 3px solid #1a1a1a; padding-bottom: 1.5rem; margin-bottom: 3rem; }
-    header .label { font-family: Arial, sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #888; margin-bottom: 0.4rem; }
-    header h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; }
-    .meal { margin-bottom: 4rem; border-top: 2px solid #1a1a1a; padding-top: 2rem; }
-    .meal-header { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; }
-    .flag { font-size: 2rem; flex-shrink: 0; }
-    .meal-meta .day-label { font-family: Arial, sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; margin-bottom: 0.25rem; }
-    .meal-meta h2 { font-size: 1.45rem; font-weight: 700; line-height: 1.25; margin-bottom: 0.4rem; }
-    .meal-meta .stats { font-family: Arial, sans-serif; font-size: 0.8rem; color: #888; display: flex; gap: 1rem; flex-wrap: wrap; }
-    .badge { display: inline-block; background: #f0f0ee; font-family: Arial, sans-serif; font-size: 0.68rem; padding: 0.15rem 0.5rem; border-radius: 3px; color: #555; }
-    .badge.reheatable { background: #e8f5e9; color: #2e7d32; }
-    h3 { font-family: Arial, sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; margin: 1.5rem 0 0.6rem; }
-    ul { padding-left: 1.2rem; }
-    ul li { margin-bottom: 0.25rem; font-size: 0.92rem; }
-    ol { padding-left: 1.4rem; }
-    ol li { margin-bottom: 0.6rem; font-size: 0.92rem; }
-    .tip { background: #f0f4e8; border-left: 3px solid #7aab3a; padding: 0.65rem 0.9rem; font-family: Arial, sans-serif; font-size: 0.83rem; color: #3a5a10; margin-top: 1.5rem; border-radius: 0 4px 4px 0; }
-    footer { text-align: center; font-family: Arial, sans-serif; font-size: 0.75rem; color: #aaa; padding-top: 2rem; border-top: 1px solid #eee; margin-top: 2rem; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weekmenu — week van 13 juli 2026</title>
+<style>
+  :root {
+    --bg: #fafaf7;
+    --card: #ffffff;
+    --ink: #1f2421;
+    --muted: #6b7066;
+    --accent: #4f7a3c;
+    --accent-soft: #eef3ea;
+    --border: #e4e1d8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.55;
+  }
+  header {
+    background: var(--accent);
+    color: #fff;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+  }
+  header h1 { margin: 0; font-size: 2rem; letter-spacing: -0.01em; }
+  header p { margin: 0.5rem 0 0; opacity: 0.9; }
+  main {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+  .tabs {
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1.5rem;
+  }
+  .tab {
+    background: none;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    color: var(--muted);
+    font-size: 1rem;
+    border-bottom: 2px solid transparent;
+    font-weight: 500;
+  }
+  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  .day {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .day h2 {
+    margin: 0 0 0.25rem;
+    font-size: 1.2rem;
+    color: var(--accent);
+  }
+  .day .meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+  .day h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1rem;
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .day ul, .day ol { padding-left: 1.25rem; }
+  .day li { margin-bottom: 0.3rem; }
+  .tip {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    padding: 0.6rem 0.9rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+  }
+  .badge {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.75rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 99px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+  .badge-time {
+    display: inline-block;
+    background: #fff8e1;
+    color: #8a6900;
+    font-size: 0.75rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 99px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+  .category {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .category h3 {
+    margin: 0 0 0.5rem;
+    color: var(--accent);
+    font-size: 1.05rem;
+  }
+  .category ul { margin: 0; padding-left: 1.25rem; }
+  .category li { margin-bottom: 0.2rem; }
+  .note {
+    color: var(--muted);
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    padding: 1.5rem;
+  }
+</style>
 </head>
 <body>
-  <div class="wrapper">
-    <a class="back" href="index.html">← Terug naar overzicht</a>
-    <header>
-      <div class="label">Recepten · Ward</div>
-      <h1>Week van 13 april 2026</h1>
-    </header>
-
-    <!-- Maandag -->
-    <div class="meal">
-      <div class="meal-header">
-        <span class="flag">🇨🇳</span>
-        <div class="meal-meta">
-          <div class="day-label">Maandag / Dinsdag</div>
-          <h2>Kung Pao Kip met Paprika en Bloemkoolrijst</h2>
-          <div class="stats">
-            <span>🕐 25 minuten</span>
-            <span>👤 2 porties</span>
-            <span class="badge reheatable">✓ Verwarmbaar</span>
-          </div>
-        </div>
-      </div>
-
-      <h3>Ingrediënten (2 porties)</h3>
-      <ul>
-        <li>400g kipfilet, in blokjes van 2 cm</li>
-        <li>1 rode paprika, in stukken</li>
-        <li>1 groene paprika, in stukken</li>
-        <li>2 stengels bleekselderij, in plakjes</li>
-        <li>4 lente-uitjes, in ringetjes</li>
-        <li>3 teentjes knoflook, fijngehakt</li>
-        <li>1 stuk verse gember (3 cm), geraspt</li>
-        <li>2 el sojasaus</li>
-        <li>1 el rijstazijn</li>
-        <li>1 el sesamolie</li>
-        <li>1 tl chilibonen-pasta (doubanjiang) of sambal oelek</li>
-        <li>1 tl maïszetmeel</li>
-        <li>1 tl kokossuiker</li>
-        <li>2 el gedroogde rode pepertjes</li>
-        <li>2 el geroosterde cashewnoten of pinda's (ongezouten)</li>
-        <li>2 el neutrale olie</li>
-        <li>½ grote bloemkool → bloemkoolrijst</li>
-        <li><em>Optioneel: Sichuanpeper</em></li>
-      </ul>
-
-      <h3>Bereiding</h3>
-      <ol>
-        <li><strong>Bloemkoolrijst:</strong> Rasp de bloemkool grof of pulseer in een keukenmachine tot rijstkorrelgrootte. Bak 5 minuten droog in een hete koekenpan met een scheutje sesamolie. Zet apart.</li>
-        <li><strong>Marinade:</strong> Meng de kipblokjes met 1 el sojasaus, ½ tl maïszetmeel en zwarte peper. Laat 10 minuten intrekken.</li>
-        <li><strong>Saus:</strong> Meng in een kommetje de resterende sojasaus, rijstazijn, kokossuiker en ½ tl maïszetmeel.</li>
-        <li><strong>Wok:</strong> Verhit de olie in een wok of grote koekenpan op hoog vuur. Bak de kip 3–4 minuten goudbruin. Leg opzij.</li>
-        <li><strong>Aromaten:</strong> Bak de gedroogde pepertjes, knoflook en gember 30 seconden. Voeg paprika en bleekselderij toe, roerbak 2 minuten.</li>
-        <li><strong>Afmaken:</strong> Kip terug in de pan. Giet de saus erover en roerbak 1 minuut. Voeg lente-uitjes en noten toe. Proef en breng op smaak.</li>
-        <li>Serveer op de bloemkoolrijst.</li>
-      </ol>
-      <div class="tip">💡 <strong>Bewaren:</strong> Verwarm restjes in de magnetron op middelhoog vermogen, afgedekt. Bloemkoolrijst apart bewaren voorkomt dat het te vochtig wordt.</div>
-    </div>
-
-    <!-- Woensdag -->
-    <div class="meal">
-      <div class="meal-header">
-        <span class="flag">🇿🇦</span>
-        <div class="meal-meta">
-          <div class="day-label">Woensdag / Donderdag</div>
-          <h2>Bobotie met Bloemkoolrijst</h2>
-          <div class="stats">
-            <span>🕐 45 minuten</span>
-            <span>👤 2 porties</span>
-            <span class="badge reheatable">✓ Verwarmbaar</span>
-          </div>
-        </div>
-      </div>
-
-      <h3>Ingrediënten (2 porties)</h3>
-      <ul>
-        <li>500g rundergehakt</li>
-        <li>1 grote ui, fijngehakt</li>
-        <li>3 teentjes knoflook, fijngehakt</li>
-        <li>1 stuk verse gember (2 cm), geraspt</li>
-        <li>1 blik gepelde tomaten (400g)</li>
-        <li>2 el rozijnen</li>
-        <li>2 el abrikozenjam of mango-chutney</li>
-        <li>1 el appel- of wijnazijn</li>
-        <li>2 el amandelschaafsel (optioneel)</li>
-        <li>2 verse laurierblaadjes</li>
-        <li><strong>Masala:</strong> 2 tl kerriepoeder · 1 tl kurkuma · 1 tl koriander · ½ tl komijn · ½ tl kaneel · ¼ tl kruidnagel</li>
-        <li>Zout en peper</li>
-        <li><em>Voor de custard:</em> 2 eieren · 100ml volle melk · snufje zout en kurkuma</li>
-        <li>½ grote bloemkool → bloemkoolrijst</li>
-      </ul>
-
-      <h3>Bereiding</h3>
-      <ol>
-        <li>Verwarm de oven voor op 180°C.</li>
-        <li><strong>Bloemkoolrijst:</strong> Rasp en bak de bloemkool 5 minuten droog. Zet apart.</li>
-        <li><strong>Gehakt:</strong> Bak de ui 5 minuten glazig in olijfolie. Voeg knoflook en gember toe, 1 minuut. Bak het gehakt rul en bruin.</li>
-        <li><strong>Kruiden:</strong> Roer het masala-mengsel erdoor, 1 minuut mee bakken. Voeg tomaten, rozijnen, jam, azijn en amandelschaafsel toe. Sudder 5 minuten op laag vuur. Breng op smaak.</li>
-        <li><strong>Ovenschaal:</strong> Schep het gehaktmengsel in een ingevette ovenschaal (~20×20 cm). Steek de laurierblaadjes er schuin in.</li>
-        <li><strong>Custard:</strong> Klop eieren, melk, zout en kurkuma los. Giet over het gehakt.</li>
-        <li><strong>Bakken:</strong> 25–30 minuten in de oven tot de custard gestold en lichtgoud is.</li>
-        <li>Serveer op de bloemkoolrijst, bestrooid met verse koriander.</li>
-      </ol>
-      <div class="tip">💡 <strong>Origineel Zuidafrikaans gerecht:</strong> Bobotie is het nationale gerecht van Zuid-Afrika — een Kaaps-Maleise schotel met eeuwenoude wortels. Smaakt de volgende dag nog beter. Verwijder de laurierblaadjes voor het bewaren. Verwarm afgedekt in de magnetron.</div>
-    </div>
-
-    <!-- Vrijdag -->
-    <div class="meal">
-      <div class="meal-header">
-        <span class="flag">🌱</span>
-        <div class="meal-meta">
-          <div class="day-label">Vrijdag / Zaterdag</div>
-          <h2>Shakshuka met Kikkererwten en Spinazie</h2>
-          <div class="stats">
-            <span>🕐 30 minuten</span>
-            <span>👤 2 porties</span>
-            <span>🥚 Vegetarisch</span>
-            <span class="badge reheatable">✓ Verwarmbaar</span>
-          </div>
-        </div>
-      </div>
-
-      <h3>Ingrediënten (2 porties)</h3>
-      <ul>
-        <li>4 eieren (groot, vers)</li>
-        <li>1 blik kikkererwten (400g), uitgelekt</li>
-        <li>1 blik gepelde tomaten (400g)</li>
-        <li>150g verse of diepvries bladspinazie</li>
-        <li>1 grote ui, fijngehakt</li>
-        <li>3 teentjes knoflook, fijngehakt</li>
-        <li>1 rode paprika, in blokjes</li>
-        <li>1 el tomatenpuree</li>
-        <li>2 el olijfolie</li>
-        <li>1 tl komijn gemalen</li>
-        <li>1 tl gerookt paprikapoeder</li>
-        <li>½ tl koriander gemalen</li>
-        <li>¼ tl cayennepeper</li>
-        <li>Zout en peper</li>
-        <li>80g feta, verkruimeld</li>
-        <li><em>Garnering:</em> verse koriander of peterselie · chilivlokken</li>
-      </ul>
-
-      <h3>Bereiding</h3>
-      <ol>
-        <li><strong>Basis:</strong> Verhit olijfolie in een brede koekenpan met deksel. Bak de ui 5 minuten glazig. Voeg knoflook en paprika toe, 3 minuten.</li>
-        <li><strong>Kruiden:</strong> Voeg komijn, paprikapoeder, koriander en cayenne toe. Roer 1 minuut mee op middelhoog vuur.</li>
-        <li><strong>Saus:</strong> Voeg tomatenpuree, tomaten en kikkererwten toe. Plet de tomaten grof. Laat 8 minuten zachtjes pruttelen.</li>
-        <li><strong>Spinazie:</strong> Roer de spinazie erdoor tot geslonken (2 min). Breng op smaak.</li>
-        <li><strong>Eieren:</strong> Maak 4 kuiltjes in de saus. Breek een ei per kuiltje. Deksel op de pan, 5–6 minuten voor vloeibaar dooier of 8 minuten voor volledig gestold.</li>
-        <li>Bestrooien met feta en verse kruiden. Direct serveren.</li>
-      </ol>
-      <div class="tip">💡 <strong>Bewaren:</strong> Bewaar de saus en de eieren apart — bak voor de tweede portie verse eieren in de opgewarmde saus. De saus is uitstekend in de magnetron opwarmbaar.</div>
-    </div>
-
-    <footer>Gegenereerd door Claude · week van 13 april 2026</footer>
+<header>
+  <h1>🍽️ Weekmenu</h1>
+  <p>Week van 13 juli 2026 &middot; 7 maaltijden &middot; 2 porties per kookbeurt &middot; Low-carb</p>
+</header>
+<main>
+  <div class="tabs">
+    <button class="tab active" onclick="show('menu',this)">🥘 Weekmenu</button>
+    <button class="tab" onclick="show('boodschappen',this)">🛒 Boodschappen</button>
   </div>
+
+  <!-- WEEKMENU PANEL -->
+  <div id="menu" class="panel active">
+
+    <div class="day">
+      <h2>Maandag — Mediterrane kabeljauwovenschotel
+        <span class="badge">🐟 Vis</span>
+        <span class="badge">Mediterraans</span>
+        <span class="badge-time">⏱ 25 min</span>
+        <span class="badge">verwarmbaar</span>
+      </h2>
+      <div class="meta">Witte bonen &middot; Tomaat &middot; Spinazie</div>
+      <h3>Ingrediënten (2 porties)</h3>
+      <ul>
+        <li>2 kabeljauwfilets (300 g totaal)</li>
+        <li>1 blik witte bonen (400 g)</li>
+        <li>1 blik gepelde tomaten (400 g)</li>
+        <li>150 g verse spinazie</li>
+        <li>1 ui, 2 tenen knoflook</li>
+        <li>2 el olijfolie, gerookte paprikapoeder, gedroogde oregano</li>
+        <li>Zout, peper, verse basilicum</li>
+      </ul>
+      <h3>Bereiding</h3>
+      <ol>
+        <li>Oven voor op 200°C. Fruit ui en knoflook in olijfolie, 3 min.</li>
+        <li>Tomaten, witte bonen, paprikapoeder, oregano toevoegen, 5 min laten sudderen.</li>
+        <li>Spinazie erdoor tot geslonken.</li>
+        <li>Kabeljauw op de saus leggen, afdekken, 12–15 min in de oven.</li>
+        <li>Garneren met basilicum.</li>
+      </ol>
+      <div class="tip">💡 <strong>Opwarmen:</strong> Magnetron 2–3 min, afgedekt.</div>
+    </div>
+
+    <div class="day">
+      <h2>Dinsdag — Marokkaanse gehaktballetjes met courgette-linten
+        <span class="badge">🥩 Rund</span>
+        <span class="badge">Marokkaans</span>
+        <span class="badge-time">⏱ 30 min</span>
+        <span class="badge">verwarmbaar</span>
+      </h2>
+      <div class="meta">Ras el hanout &middot; Tomatensaus &middot; Courgette</div>
+      <h3>Ingrediënten (2 porties)</h3>
+      <ul>
+        <li>300 g rundergehakt, 1 ei</li>
+        <li>2 tl ras el hanout, 1 tl komijnpoeder</li>
+        <li>1 teen knoflook, verse munt of koriander</li>
+        <li>1 blik tomatenblokjes (400 g), 1 ui, paprikapoeder</li>
+        <li>2 courgettes (linten), pijnboompitten (optioneel)</li>
+      </ul>
+      <h3>Bereiding</h3>
+      <ol>
+        <li>Gehakt mengen met ei, kruiden, knoflook en munt/koriander. Balletjes vormen.</li>
+        <li>Balletjes rondom bruin bakken, 5–6 min.</li>
+        <li>Ui erbij, dan tomatenblokjes en paprikapoeder, 10 min sudderen.</li>
+        <li>Courgettelinten laatste 2–3 min toevoegen.</li>
+        <li>Serveren met pijnboompitten.</li>
+      </ol>
+      <div class="tip">💡 <strong>Opwarmen:</strong> Warmt goed op in de magnetron.</div>
+    </div>
+
+    <div class="day">
+      <h2>Woensdag — Mexicaanse kipschotel met zwarte bonen
+        <span class="badge">🍗 Kip</span>
+        <span class="badge">Mexicaans</span>
+        <span class="badge-time">⏱ 25 min</span>
+        <span class="badge">verwarmbaar</span>
+      </h2>
+      <div class="meta">Zwarte bonen &middot; Paprika &middot; Avocado</div>
+      <h3>Ingrediënten (2 porties)</h3>
+      <ul>
+        <li>300 g kipfilet of kipdij</li>
+        <li>1 blik zwarte bonen (400 g)</li>
+        <li>2 paprika's, 1 rode ui, 2 tenen knoflook</li>
+        <li>Komijnpoeder, chilipoeder, limoen</li>
+        <li>1 avocado, verse koriander</li>
+      </ul>
+      <h3>Bereiding</h3>
+      <ol>
+        <li>Kip 5–6 min bakken tot bruin.</li>
+        <li>Paprika, ui, knoflook 4–5 min meebakken.</li>
+        <li>Zwarte bonen, komijn, chilipoeder erdoor, 2–3 min verwarmen.</li>
+        <li>Op smaak met limoensap, zout, peper.</li>
+        <li>Serveren met avocado en koriander.</li>
+      </ol>
+      <div class="tip">💡 <strong>Opwarmen:</strong> Avocado vers snijden bij het serveren, rest is verwarmbaar.</div>
+    </div>
+
+    <div class="day">
+      <h2>Donderdag — Aziatische runderreepjes-roerbak
+        <span class="badge">🥩 Rund</span>
+        <span class="badge">Aziatisch</span>
+        <span class="badge-time">⏱ 25 min</span>
+        <span class="badge">verwarmbaar</span>
+      </h2>
+      <div class="meta">Broccoli &middot; Paksoi &middot; Bloemkoolrijst</div>
+      <h3>Ingrediënten (2 porties)</h3>
+      <ul>
+        <li>300 g biefreepjes</li>
+        <li>300 g broccoli, 2 paksoi, 1 rode paprika</li>
+        <li>Gember, knoflook, sojasaus, sesamolie</li>
+        <li>400 g bloemkoolrijst</li>
+      </ul>
+      <h3>Bereiding</h3>
+      <ol>
+        <li>Bloemkoolrijst kort garen, apart zetten.</li>
+        <li>Biefreepjes 2 min bruin bakken, uit de pan halen.</li>
+        <li>Gember en knoflook 30 sec bakken, broccoli en paprika 4 min roerbakken.</li>
+        <li>Paksoi 2 min mee, rundvlees terug in de pan.</li>
+        <li>Sojasaus en sesamolie toevoegen, serveren over bloemkoolrijst.</li>
+      </ol>
+      <div class="tip">💡 <strong>Opwarmen:</strong> Warmt goed op, even doorroeren.</div>
+    </div>
+
+    <div class="day">
+      <h2>Vrijdag — Indiase linzen-bloemkooldal met spinazie
+        <span class="badge">🌱 Vegetarisch</span>
+        <span class="badge">Indiaas</span>
+        <span class="badge-time">⏱ 40 min</span>
+        <span class="badge">verwarmbaar</span>
+      </h2>
+      <div class="meta">Rode linzen &middot; Bloemkool &middot; Kurkuma &middot; Kerrie</div>
+      <h3>Ingrediënten (2 porties)</h3>
+      <ul>
+        <li>200 g rode linzen, ½ bloemkool, 150 g spinazie</li>
+        <li>Ui, knoflook, gember</li>
+        <li>1 blik tomatenblokjes (400 g), groentebouillon</li>
+        <li>Kurkuma, kerriepoeder, komijnzaad, kokosmelk (optioneel)</li>
+      </ul>
+      <h3>Bereiding</h3>
+      <ol>
+        <li>Ui, knoflook, gember 3 min fruiten.</li>
+        <li>Specerijen 1 min meebakken.</li>
+        <li>Linzen, tomaat, bouillon toevoegen, 15–20 min sudderen.</li>
+        <li>Bloemkool erbij, 8–10 min meekoken.</li>
+        <li>Spinazie erdoor roeren, eventueel kokosmelk toevoegen.</li>
+      </ol>
+      <div class="tip">💡 <strong>Opwarmen:</strong> Smaakt vaak nog beter de volgende dag. Vegetarische maaltijd van de week.</div>
+    </div>
+
+    <div class="day">
+      <h2>Zaterdag — Grieks geroosterde kip met knolselderij en wortel
+        <span class="badge">🍗 Kip</span>
+        <span class="badge">Grieks</span>
+        <span class="badge-time">⏱ 55 min</span>
+        <span class="badge">verwarmbaar</span>
+      </h2>
+      <div class="meta">Citroen-oregano &middot; Feta &middot; Wortelgroenten</div>
+      <h3>Ingrediënten (2 porties)</h3>
+      <ul>
+        <li>4 kippendijen (ca. 500 g)</li>
+        <li>Knolselderij, 3 winterwortelen</li>
+        <li>Citroen, knoflook, gedroogde oregano</li>
+        <li>100 g fetakaas, verse tijm of rozemarijn</li>
+      </ul>
+      <h3>Bereiding</h3>
+      <ol>
+        <li>Oven voor op 200°C.</li>
+        <li>Knolselderij en wortel met olie, zout, peper, oregano mengen, op bakplaat.</li>
+        <li>Kip inwrijven met olie, oregano, knoflook, citroensap, zout, peper.</li>
+        <li>Kip tussen groenten leggen, 40–45 min roosteren.</li>
+        <li>Feta erover, serveren met citroen en kruiden.</li>
+      </ol>
+      <div class="tip">💡 <strong>Opwarmen:</strong> Feta pas na het opwarmen toevoegen.</div>
+    </div>
+
+    <div class="day">
+      <h2>Zondag — Argentijnse biefstuk met chimichurri
+        <span class="badge">🥩 Rund</span>
+        <span class="badge">Argentijns</span>
+        <span class="badge-time">⏱ 45 min</span>
+        <span class="badge">kort verwarmbaar</span>
+      </h2>
+      <div class="meta">Chimichurri &middot; Geroosterde groenten</div>
+      <h3>Ingrediënten (2 porties)</h3>
+      <ul>
+        <li>2 biefstukken (200 g per stuk)</li>
+        <li>Courgette, paprika, sperziebonen</li>
+        <li>Grote bos peterselie, knoflook, rode chilipeper</li>
+        <li>Olijfolie, rode wijnazijn</li>
+      </ul>
+      <h3>Bereiding</h3>
+      <ol>
+        <li>Chimichurri maken: peterselie, knoflook, chilipeper hakken, mengen met olie, azijn, zout, peper.</li>
+        <li>Groenten roosteren, 20–25 min op 200°C.</li>
+        <li>Biefstukken kruiden, 2–4 min per kant bakken, 5 min laten rusten.</li>
+        <li>Snijden, serveren met groenten en chimichurri.</li>
+      </ol>
+      <div class="tip">💡 <strong>Opwarmen:</strong> Kort opwarmen (max. 30 sec) om taaiheid te voorkomen.</div>
+    </div>
+
+  </div><!-- /menu panel -->
+
+  <!-- BOODSCHAPPEN PANEL -->
+  <div id="boodschappen" class="panel">
+
+    <div class="category">
+      <h3>🥩 Vlees, vis &amp; vleeswaren</h3>
+      <ul>
+        <li>300 g kabeljauwfilet (vers)</li>
+        <li>300 g rundergehakt (mager)</li>
+        <li>300 g kipfilet of kipdij</li>
+        <li>300 g biefreepjes of minutensteak</li>
+        <li>4 kippendijen (ca. 500 g)</li>
+        <li>2 biefstukken (200 g per stuk)</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h3>🥦 Groente &amp; fruit</h3>
+      <ul>
+        <li>300 g verse spinazie</li>
+        <li>3 uien, 1 rode ui</li>
+        <li>2 bollen knoflook</li>
+        <li>3 courgettes</li>
+        <li>5 paprika's (3 rood, 2 geel)</li>
+        <li>300 g broccoliroosjes</li>
+        <li>2 paksoi</li>
+        <li>½ bloemkool (vers)</li>
+        <li>1 avocado, 1 limoen, 1 citroen</li>
+        <li>2 duimen verse gember</li>
+        <li>3 winterwortelen, 1 knolselderij</li>
+        <li>200 g sperziebonen</li>
+        <li>1 rode chilipeper</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h3>🌿 Verse kruiden</h3>
+      <ul>
+        <li>Verse basilicum (bosje)</li>
+        <li>Verse munt of koriander (bosje)</li>
+        <li>Verse koriander (bosje)</li>
+        <li>Verse tijm of rozemarijn (bosje)</li>
+        <li>Grote bos verse peterselie</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h3>🥫 Houdbaar (blik, sauzen, bouillon, noten)</h3>
+      <ul>
+        <li>1 blik witte bonen (400 g)</li>
+        <li>1 blik gepelde tomaten (400 g)</li>
+        <li>2 blikken tomatenblokjes (400 g per stuk)</li>
+        <li>1 blik zwarte bonen (400 g)</li>
+        <li>200 g rode linzen (droog)</li>
+        <li>Groentebouillon (voor 400 ml)</li>
+        <li>Sojasaus (fles)</li>
+        <li>Sesamolie (flesje)</li>
+        <li>Sesamzaad (potje)</li>
+        <li>Handje pijnboompitten <span class="note">(optioneel)</span></li>
+        <li>Rode wijnazijn <span class="note">(mogelijk al in huis)</span></li>
+        <li>100 ml kokosmelk <span class="note">(optioneel)</span></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h3>🧊 Diepvries</h3>
+      <ul>
+        <li>400 g bloemkoolrijst <span class="note">(vers of diepvries)</span></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h3>🫙 Kruiden, specerijen &amp; olie</h3>
+      <ul>
+        <li>Gerookte paprikapoeder</li>
+        <li>Gedroogde oregano</li>
+        <li>Ras el hanout</li>
+        <li>Komijnpoeder <span class="note">(mogelijk al in huis)</span></li>
+        <li>Paprikapoeder <span class="note">(mogelijk al in huis)</span></li>
+        <li>Chilipoeder of chilivlokken</li>
+        <li>Kurkumapoeder</li>
+        <li>Kerriepoeder of garam masala</li>
+        <li>Komijnzaad</li>
+        <li>Olijfolie <span class="note">(mogelijk al in huis)</span></li>
+        <li>Kokosolie <span class="note">(optioneel)</span></li>
+        <li>Zonnebloem- of arachideolie <span class="note">(mogelijk al in huis)</span></li>
+        <li>Zout &amp; zwarte peper <span class="note">(mogelijk al in huis)</span></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h3>🥚 Zuivel &amp; eieren</h3>
+      <ul>
+        <li>1 ei</li>
+        <li>100 g fetakaas</li>
+      </ul>
+    </div>
+
+  </div><!-- /boodschappen panel -->
+
+</main>
+<footer>Gegenereerd door Claude &middot; Weekmenu 13 juli 2026</footer>
+
+<script>
+function show(panel, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(panel).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
 </body>
 </html>
